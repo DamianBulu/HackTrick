@@ -223,3 +223,28 @@ class Tracker2D:
                            """, (track_id,)).fetchall()
         con.close()
         return rows
+
+    def get_distance_covered(self) -> dict:
+        """
+        Total metres run per track_id across all frames.
+        Returns {track_id: metres_float}
+        """
+        con = sqlite3.connect(self.db_path)
+        rows = con.execute("""
+                           SELECT track_id, frame_id, pitch_x, pitch_y
+                           FROM positions
+                           WHERE track_id IS NOT NULL
+                             AND pitch_x IS NOT NULL
+                           ORDER BY track_id, frame_id
+                           """).fetchall()
+        con.close()
+
+        distances = {}
+        prev = {}
+        for track_id, frame_id, x, y in rows:
+            if track_id in prev:
+                px, py = prev[track_id]
+                d = ((x - px) ** 2 + (y - py) ** 2) ** 0.5
+                distances[track_id] = distances.get(track_id, 0.0) + d
+            prev[track_id] = (x, y)
+        return distances
