@@ -248,3 +248,238 @@ class Tracker2D:
                 distances[track_id] = distances.get(track_id, 0.0) + d
             prev[track_id] = (x, y)
         return distances
+
+
+    @staticmethod
+    def _draw_pitch(canvas: np.ndarray):
+        """
+        Draw standard football pitch lines on a green canvas.
+        All coordinates are in canvas pixels (CANVAS_W × CANVAS_H).
+        """
+        W, H = CANVAS_W, CANVAS_H
+        white = (255, 255, 255)
+        lw = 2  # line width
+
+        # Outer boundary
+        cv2.rectangle(canvas, (0, 0), (W - 1, H - 1), white, lw)
+
+        # Centre line
+        cv2.line(canvas, (W // 2, 0), (W // 2, H), white, lw)
+
+        # Centre circle (radius ~9.15 m → ~91px)
+        cv2.circle(canvas, (W // 2, H // 2), int(9.15 * SCALE_X), white, lw)
+        cv2.circle(canvas, (W // 2, H // 2), 3, white, -1)
+
+        # Penalty boxes (left and right)
+        # Left: 16.5 m deep, 40.32 m wide centred
+        pen_d = int(16.5 * SCALE_X)
+        pen_w_half = int(20.16 * SCALE_Y)
+        cy = H // 2
+        cv2.rectangle(canvas, (0, cy - pen_w_half), (pen_d, cy + pen_w_half), white, lw)
+        cv2.rectangle(canvas, (W - pen_d, cy - pen_w_half), (W, cy + pen_w_half), white, lw)
+
+        # Goal boxes (left and right, 5.5 m deep, 18.32 m wide centred)
+        gb_d = int(5.5 * SCALE_X)
+        gb_w_half = int(9.16 * SCALE_Y)
+        cv2.rectangle(canvas, (0, cy - gb_w_half), (gb_d, cy + gb_w_half), white, lw)
+        cv2.rectangle(canvas, (W - gb_d, cy - gb_w_half), (W, cy + gb_w_half), white, lw)
+
+        # Penalty spots
+        cv2.circle(canvas, (int(11 * SCALE_X), cy), 4, white, -1)
+        cv2.circle(canvas, (W - int(11 * SCALE_X), cy), 4, white, -1)
+
+        # Corner arcs (radius 1 m)
+        r = int(1.0 * SCALE_X)
+        cv2.ellipse(canvas, (0, 0), (r, r), 0, 0, 90, white, lw)
+        cv2.ellipse(canvas, (W, 0), (r, r), 90, 0, 90, white, lw)
+        cv2.ellipse(canvas, (0, H), (r, r), 270, 0, 90, white, lw)
+        cv2.ellipse(canvas, (W, H), (r, r), 180, 0, 90, white, lw)
+
+    @staticmethod
+    def _cls_to_color(cls_id: int) -> Tuple[int, int, int]:
+        return {
+            CLS_BALL: COLOR_BALL,
+            CLS_GK: COLOR_GK,
+            CLS_REF: COLOR_REF,
+            CLS_T1: COLOR_TEAM1,
+            CLS_T2: COLOR_TEAM2,
+        }.get(cls_id, (200, 200, 200))
+
+    @staticmethod
+    def _cls_to_label(cls_id: int) -> str:
+        return {
+            CLS_BALL: "B",
+            CLS_GK: "GK",
+            CLS_REF: "R",
+            CLS_T1: "1",
+            CLS_T2: "2",
+        }.get(cls_id, "?")
+
+    def render_frame(
+            self,
+            frame_id: int,
+            trail_frames: int = 20,
+    ) -> np.ndarray:
+        """
+        Render a single 2D pitch frame.
+
+        frame_id:     which frame to draw
+        trail_frames: how many past frames to draw as a fading trail
+        Returns a BGR numpy array (CANVAS_H × CANVAS_W × 3).
+        """
+        # Green pitch background
+        canvas = np.zeros((CANVAS_H, CANVAS_W, 3), dtype=np.uint8)
+        canvas[:] = (34, 100, 34)
+        self._draw_pitch(canvas)
+
+        # Draw trails (faded past positions)
+        if trail_frames > 0:
+            con = sqlite3.connect(self.db_path)
+            trail_rows = con.execute("""
+                                     SELECT track_id, cls_id, pitch_x, pitch_y, frame_id
+                                     FROM positions
+                                     WHERE frame_id BETWEEN ? AND ?
+                                       AND pitch_x IS NOT NULL
+                                       AND track_id IS NOT NULL
+                                     ORDER BY frame_id
+                                     """, (frame_id - trail_frames, frame_id - 1)).fetchall()
+            con.close()
+
+            for tid, cls_id, px, py, fid in trail_rows:
+                age = frame_id - fid  # 1 = one frame ago
+                alpha = max(0.05, 1.0 - age / trail_frames)  # fade with age
+                cx = int(px * SCALE_X)
+                cy = int(py * SCALE_Y)
+                color = tuple(int(c * alpha * 0.6) for c in self._cls_to_color(cls_id))
+                cv2.circle(canvas, (cx, cy), 3, color, -1)
+
+        # Draw current positions
+        rows = self.get_frame_positions(frame_id)
+        for _, track_id, cls_id, pitch_x, pitch_y in rows:
+            cx = int(pitch_x * SCALE_X)
+            cy = int(pitch_y * SCALE_Y)
+            color = self._cls_to_color(cls_id)
+            radius = 10 if cls_id == CLS_BALL else 14
+
+            cv2.circle(canvas, (cx, cy), radius, color, -1)
+            cv2.circle(canvas, (cx, cy), radius, (255, 255, 255), 1)
+
+            label = self._cls_to_label(cls_id)
+            if track_id:
+                label = str(track_id)
+
+            cv2.putText(
+                canvas, label,
+                (cx - 5, cy + 4),
+                cv2.FONT_HERSHEY_SIMPLEX, 0.35,
+                (255, 255, 255), 1, cv2.LINE_AA,
+            )
+
+        # Frame counter overlay
+        cv2.putText(
+            canvas, f"Frame {frame_id}",
+            (10, 24),
+            cv2.FONT_HERSHEY_SIMPLEX, 0.7,
+            (200, 200, 200), 1, cv2.LINE_AA,
+        )
+        return canvas
+
+    # ── Stage 7 — Video export ────────────────────────────────────────────────
+
+    def export_video(
+            self,
+            output_path: str = "output_2d.mp4",
+            fps: float = 25.0,
+            trail_frames: int = 20,
+    ):
+        """
+        Render every stored frame and write to a .mp4 video.
+
+        output_path:  where to save the file
+        fps:          must match your original video fps
+        trail_frames: how many frames of movement trail to show
+        """
+        frame_ids = self.get_all_frame_ids()
+        if not frame_ids:
+            print("No frames in database yet.")
+            return
+
+        fourcc = cv2.VideoWriter_fourcc(*"mp4v")
+        writer = cv2.VideoWriter(output_path, fourcc, fps, (CANVAS_W, CANVAS_H))
+
+        print(f"Exporting {len(frame_ids)} frames → {output_path}")
+        for i, fid in enumerate(frame_ids):
+            frame = self.render_frame(fid, trail_frames=trail_frames)
+            writer.write(frame)
+            if i % 100 == 0:
+                print(f"  {i}/{len(frame_ids)} frames done")
+
+        writer.release()
+        print(f"Done. Saved to {output_path}")
+
+# ── Drop-in integration with your existing run_video.py ──────────────────────
+
+    def run_with_2d_map(video_path: str, ai_agent, output_dir: str = "output"):
+        """
+        Full example: processes a video with the AI agent and produces both
+        the annotated camera video AND the 2D pitch map video side by side.
+
+        Replace your existing batch loop in run_video.py with this.
+        """
+        from pathlib import Path
+        import cv2 as _cv2
+
+        video_path = Path(video_path)
+        output_dir = Path(output_dir)
+        output_dir.mkdir(exist_ok=True)
+
+        db_path = str(output_dir / f"{video_path.stem}_tracking.db")
+        tracker = Tracker2D(db_path)
+
+        cap = _cv2.VideoCapture(str(video_path))
+        total_frames = int(cap.get(_cv2.CAP_PROP_FRAME_COUNT))
+        fps = cap.get(_cv2.CAP_PROP_FPS)
+        cap.release()
+
+        BATCH_SIZE = 64
+        N_KEYPOINTS = 32
+
+        print(f"Processing {video_path.name}  ({total_frames} frames @ {fps:.1f} fps)")
+
+        all_frames, all_results = [], []
+        num_batches = (total_frames + BATCH_SIZE - 1) // BATCH_SIZE
+
+        for batch_num in range(num_batches):
+            start = batch_num * BATCH_SIZE
+            size = min(BATCH_SIZE, total_frames - start)
+
+            # Load frames
+            cap = _cv2.VideoCapture(str(video_path))
+            cap.set(_cv2.CAP_PROP_POS_FRAMES, start)
+            frames = []
+            for _ in range(size):
+                ret, f = cap.read()
+                if not ret:
+                    break
+                frames.append(f)
+            cap.release()
+
+            if not frames:
+                break
+
+            print(f"  Batch {batch_num + 1}/{num_batches}")
+            results = ai_agent.predict_batch(frames, offset=start, n_keypoints=N_KEYPOINTS)
+
+            # Save to DB immediately — no need to hold all frames in memory
+            tracker.process_batch(results, frames)
+            all_frames.extend(frames)
+            all_results.extend(results)
+
+        print("All batches processed. Exporting 2D map video...")
+        tracker.export_video(
+            str(output_dir / f"{video_path.stem}_2d_map.mp4"),
+            fps=fps,
+            trail_frames=20,
+        )
+        print("Done.")
+        return tracker
