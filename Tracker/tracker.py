@@ -141,4 +141,48 @@ class Tracker2D:
         H, mask = cv2.findHomography(src, dst, cv2.RANSAC, 5.0)
         return H
 
-    
+    @staticmethod
+    def _project(pixel_x: int, pixel_y: int, H: np.ndarray) -> Tuple[float, float]:
+        """
+        Apply homography H to a single pixel point → pitch metres.
+        Returns (pitch_x, pitch_y) in metres from top-left corner.
+        """
+        pt = np.array([[[float(pixel_x), float(pixel_y)]]], dtype=np.float32)
+        result = cv2.perspectiveTransform(pt, H)
+        px, py = result[0][0]
+        # Clamp to pitch bounds — projection can go slightly outside on edges
+        px = float(np.clip(px, 0.0, PITCH_W_M))
+        py = float(np.clip(py, 0.0, PITCH_H_M))
+        return px, py
+
+    def process_batch(self, results, frames):
+        """
+        Call this after every ai_agent.predict_batch() call.
+
+        results: list[TVFrameResult]
+        frames:  list[np.ndarray]  — the raw video frames you passed to predict_batch
+        """
+        rows = []
+
+        for frame_result, frame in zip(results, frames):
+            # Build homography for this frame from its keypoints
+            H = self._build_homography(frame_result.keypoints)
+
+            for box in frame_result.boxes:
+                px, py = self._feet_pixel(box)
+
+                # Project to pitch coordinates if we have a valid homography
+                pitch_x, pitch_y = None, None
+                if H is not None:
+                    pitch_x, pitch_y = self._project(px, py, H)
+
+                rows.append((
+                    frame_result.frame_id,
+                    box.track_id,
+                    box.cls_id,
+                    round(box.conf, 4),
+                    px, py,
+                    pitch_x, pitch_y,
+                ))
+
+        self._insert_rows(rows)
