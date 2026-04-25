@@ -51,7 +51,10 @@ class Tracker2D:
 
     def __init__(self,db_path:str='tracking.db'):
         self.db_path = db_path
-        self.init_db()
+        self._last_valid_H = None
+        self._h_age = 0
+        self._MAX_H_CARRY_FRAMES = 15
+        self._init_db()
 
     def _init_db(self):
         """Create tables if they don't exist yet."""
@@ -167,6 +170,15 @@ class Tracker2D:
         for frame_result, frame in zip(results, frames):
             # Build homography for this frame from its keypoints
             H = self._build_homography(frame_result.keypoints)
+            if H is not None:
+                self._last_valid_H = H
+                self._h_age = 0
+            else:
+                self._h_age += 1
+                if self._h_age <= self._MAX_H_CARRY_FRAMES:
+                    H = self._last_valid_H
+                else:
+                    H = None
 
             for box in frame_result.boxes:
                 px, py = self._feet_pixel(box)
