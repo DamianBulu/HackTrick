@@ -111,3 +111,34 @@ class Tracker2D:
         cy = box.y2
         return cx, cy
 
+    @staticmethod
+    def _build_homography(keypoints: list) -> Optional[np.ndarray]:
+        """
+        Build a homography matrix H that maps frame pixel coords → pitch metres.
+
+        keypoints: list of 32 [x, y] floats from TVFrameResult.
+                   Zero pairs [0.0, 0.0] mean the keypoint wasn't detected.
+
+        Returns H (3×3 numpy array) or None if fewer than 4 keypoints visible.
+        """
+        src_pts = []  # pixel positions detected in the frame
+        dst_pts = []  # matching real-world positions in metres
+
+        # There are 32 points that have been identified by the ai and we try to map it based on those
+        for i, kp in enumerate(keypoints):
+            x, y = float(kp[0]), float(kp[1])
+            # Skip undetected keypoints
+            if abs(x) < 1e-4 and abs(y) < 1e-4:
+                continue
+            src_pts.append([x, y])
+            dst_pts.append(list(TEMPLATE_METRES[i]))
+
+        if len(src_pts) < 4:
+            return None  # not enough points to compute a homography
+
+        src = np.array(src_pts, dtype=np.float32)
+        dst = np.array(dst_pts, dtype=np.float32)
+        H, mask = cv2.findHomography(src, dst, cv2.RANSAC, 5.0)
+        return H
+
+    
