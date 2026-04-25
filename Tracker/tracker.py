@@ -186,3 +186,40 @@ class Tracker2D:
                 ))
 
         self._insert_rows(rows)
+
+    def get_frame_positions(self, frame_id: int) -> list:
+        """All detected objects at a single frame."""
+        con = sqlite3.connect(self.db_path)
+        rows = con.execute("""
+                           SELECT frame_id, track_id, cls_id, pitch_x, pitch_y
+                           FROM positions
+                           WHERE frame_id = ?
+                             AND pitch_x IS NOT NULL
+                           """, (frame_id,)).fetchall()
+        con.close()
+        return rows
+
+    def get_all_frame_ids(self) -> List[int]:
+        """Sorted list of every frame_id stored in the DB."""
+        con = sqlite3.connect(self.db_path)
+        rows = con.execute(
+            "SELECT DISTINCT frame_id FROM positions ORDER BY frame_id"
+        ).fetchall()
+        con.close()
+        return [r[0] for r in rows]
+
+    def get_trajectory(self, track_id: int) -> List[Tuple[int, float, float]]:
+        """
+        (frame_id, pitch_x, pitch_y) for one player across the whole match.
+        Useful for drawing movement trails.
+        """
+        con = sqlite3.connect(self.db_path)
+        rows = con.execute("""
+                           SELECT frame_id, pitch_x, pitch_y
+                           FROM positions
+                           WHERE track_id = ?
+                             AND pitch_x IS NOT NULL
+                           ORDER BY frame_id
+                           """, (track_id,)).fetchall()
+        con.close()
+        return rows
