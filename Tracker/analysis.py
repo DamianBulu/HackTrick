@@ -155,17 +155,22 @@ class TacticalAnalyzer:
         return results
 
 if __name__ == "__main__":
-    # Example usage:
-    db_file = "output/tracking_tracking.db"
-    analyzer = TacticalAnalyzer(db_file)
-    print("Analyzing match...")
+    import argparse
+    import json
+    import os
+    parser = argparse.ArgumentParser()
+    parser.add_argument("db", help="Path to tracking DB")
+    parser.add_argument("--output", default="output/analysis_report.json")
+    args = parser.parse_args()
+
+    if not os.path.exists(args.db):
+        print(f"Error: {args.db} not found")
+        exit(1)
+
+    analyzer = TacticalAnalyzer(args.db)
+    print(f"Analyzing match using {args.db}...")
     match_data = analyzer.analyze_match()
     
-    # Print the first available frame's data as a demo
-    if match_data:
-        import json
-        for frame_data in match_data:
-            if frame_data["team1"]["player_count"] > 0 or frame_data["team2"]["player_count"] > 0:
-                print(f"Analysis for frame {frame_data['frame_id']}:")
-                print(json.dumps(frame_data, indent=2))
-                break
+    with open(args.output, "w") as f:
+        json.dump(match_data, f, indent=2)
+    print(f"Analysis saved to {args.output}")
