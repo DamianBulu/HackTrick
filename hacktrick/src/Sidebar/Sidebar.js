@@ -9,17 +9,10 @@ function Sidebar() {
     const mock = [
         {
             "id": 1,
-            "match": "CFR",
-            "shortcut": "CFR",
-            "competitie": "Liga 1",
+            "match": "Barcelona",
+            "shortcut": "FCB",
+            "competitie": "Champions League",
             "data": "14 Apr 2026"
-        },
-        {
-            "id": 2,
-            "match": "Universitatea Craiova",
-            "shortcut": "UCV",
-            "competitie": "Cupa Romaniei",
-            "data": "22 Apr 2026"
         }
     ];
 

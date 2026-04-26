@@ -205,49 +205,66 @@ class ReIDTracker {
 // ── App ───────────────────────────────────────────────────────────────────────
 function App() {
     const FPS = 30;
-    const [matchData,         setMatchData]         = useState(null);
+    const [matchData, setMatchData] = useState(null);
     const [currentFrameIndex, setCurrentFrameIndex] = useState(0);
-    const [inputValue,        setInputValue]        = useState("");
-    const [chartKey,          setChartKey]          = useState(0);
+    const [inputValue, setInputValue] = useState("");
+    const [chartKey, setChartKey] = useState(0);
     const [messages, setMessages] = useState([
-        { sender: "Coach", message: "What would you suggest?" },
-        { sender: "AI",    message: "Momentum curve updated. The ball trajectory in this phase shows deep defensive pressure." },
+        {sender: "AI", message: "Ask me anything about this match!"},
     ]);
-    const [play,          setPlay]          = useState(false);
+    const chatEndRef = useRef(null);
+    const [play, setPlay] = useState(false);
     const [playbackSpeed, setPlaybackSpeed] = useState(1);
-    const [viewMode,      setViewMode]      = useState('pitch');
+    const [viewMode, setViewMode] = useState('video');
     const [currentVideoPath, setCurrentVideoPath] = useState('/Data/vid3_fixed.mp4');
     const [activeEventIndex, setActiveEventIndex] = useState(0);
 
-    const [events] = useState([
-        {
-            type: 'Press',
-            title: 'High press trigger',
-            desc: 'Deac + Boateng press Hindrich.',
-            color: '#4cc9f0',
-            videoPath: '/Data/barca3_fixed.mp4',
-            jsonPath: '/Data/barca3_results_complete.json'
-        },
-        {
-            type: 'Press',
-            title: 'Midfield shape collapses',
-            desc: 'Ofosu 3m out of position.',
-            color: '#4cc9f0',
-            videoPath: '/Data/barca5_fixed.mp4',
-            jsonPath: '/Data/barca5_results_complete.json'
-        },
-        {
-            type: 'Counter',
-            title: 'Counter — CFR goal (1-1)',
-            desc: 'Paun steps out, 8m CB gap.',
-            color: '#ff4d4d',
-            videoPath: '/Data/vid3_fixed.mp4',
-            jsonPath: '/Data/vid3_results.json'
-        },
-    ]);
+    const [events] = useState([{
+        "type": "Shape Issue",
+        "title": "Wrong side recovery run",
+        "desc": "A defender recovered on the wrong side of the attacker, ending up goal-side but not between the ball and the player. It started when the defender reacted late to the run and tried to recover from behind instead of getting across the attacker’s path. As it developed, the attacker kept the advantage because the defender couldn’t block the passing lane or apply real pressure. This is dangerous because the attacker can receive facing goal with time to control or shoot. The fix is to recover goal-side and ball-side at the same time, getting across the attacker early instead of chasing from behind.",
+        "color": "#4cc9f0",
+        "videoPath": "/Data/barca3_fixed.mp4",
+        "jsonPath": "/Data/barca3_results_complete.json"
+    }, {
+        "type": "Defensive Gap",
+        "title": "Repeated central defensive gaps",
+        "desc": "Clear gaps kept opening in the defensive block in central areas, giving attackers space to run into. It started because the defensive shape was too spread and the line dropped while individual players stepped out or drifted wide without cover behind them. As it developed, no one adjusted to close the space, so the gap stayed open long enough for direct passes or runs through the middle. This matters because even a short moment of space in that zone allows a simple forward pass into a dangerous attack that is very hard to recover from. The fix is to keep the defensive line compact and connected, with the whole unit shifting together whenever one player moves so no central spaces are left open.",
+        "color": "#f72585",
+        "videoPath": "/Data/barca5_fixed.mp4",
+        "jsonPath": "/Data/barca5_results_complete.json"
+    }, {
+        "type": "Overload",
+        "title": "Heavy overload at the box",
+        "desc": "Team1 created a clear overload near the box with five attackers against only two defenders. It started because runners were not tracked early, allowing attackers to push forward freely. As it developed, more attackers joined while defenders stayed in place, leaving them completely outnumbered. In that situation, defenders cannot cover all passing options, and a shot becomes almost inevitable. This matters because overloads in that zone almost always lead to chances. The fix is for midfielders to track runs earlier and recover before the ball reaches the final third.",
+        "color": "#ff4d4f",
+        "videoPath": "/Data/barca3_fixed.mp4",
+        "jsonPath": "/Data/barca3_results_complete.json"
+    }, {
+        "type": "Defensive Gap",
+        "title": "Big central gap opens",
+        "desc": "Team2 left a significant hole right through the middle of their defence in a dangerous area. It started because the whole defensive shape was too spread, with the line sitting deep and one player stepping out or drifting wide without cover behind him. As it developed, no one adjusted to close that space, and even though it lasted less than a second, it was enough time for a direct run or pass towards goal. This is dangerous because attackers can receive, turn and shoot with no pressure. The fix is to keep the defensive block tight and connected, so when one player moves, the whole line shifts together and no central gaps appear.",
+        "color": "#f72585",
+        "videoPath": "/Data/barca3_fixed.mp4",
+        "jsonPath": "/Data/barca3_results_complete.json"
+    }, {
+        "type": "Overload",
+        "title": "Extreme overload at the box",
+        "desc": "The defending team was completely outnumbered near their own box, with attackers flooding the area and leaving only one defender to deal with everything. It started because midfielders didn’t track runners early, allowing wave after wave of attackers to push forward freely. As it developed, more attackers joined while defenders stayed static, making the imbalance even worse until it became impossible to defend. This is one of the clearest chance-creation situations because one defender cannot deal with multiple options at once, so a shot is almost guaranteed. The fix is for midfield to recover earlier and track runners immediately when they move, not after the ball arrives.",
+        "color": "#ff4d4f",
+        "videoPath": "/Data/barca5_fixed.mp4",
+        "jsonPath": "/Data/barca5_results_complete.json"
+    }, {
+        "type": "Shape Issue",
+        "title": "Multiple free attackers central",
+        "desc": "Several attackers were left completely unmarked right in front of goal at the same time. It started when defenders lost track of runners, especially late movements into the box from deeper positions. As it developed, there was no communication or handover between defenders, and more attackers arrived freely, turning it into a full defensive breakdown rather than an individual mistake. This is extremely dangerous because free attackers in central areas mean direct, uncontested chances on goal. The fix is to assign runners early, communicate constantly, and make sure every defender knows exactly who they are responsible for, especially inside the box.",
+        "color": "#fca311",
+        "videoPath": "/Data/barca5_fixed.mp4",
+        "jsonPath": "/Data/barca5_results_complete.json"
+    }])
 
-    const videoRef   = useRef(null);
-    const timerRef   = useRef(null);
+    const videoRef = useRef(null);
+    const timerRef = useRef(null);
 
     const PITCH_W_M = 105.0;
     const PITCH_H_M = 68.0;
@@ -259,7 +276,7 @@ function App() {
     const TOTAL_MATCH_FRAMES = TOTAL_MATCH_MINUTES * 60 * FPS; // 162,000 frames
 
     // Re-ID tracker instance — persists for the lifetime of the component
-    const reidRef    = useRef(new ReIDTracker());
+    const reidRef = useRef(new ReIDTracker());
 
     // ── Reset tracker when match data changes ─────────────────────────────
     useEffect(() => {
@@ -334,7 +351,7 @@ function App() {
 
         // ── Ball: single best detection, no ID tracking needed ────────────
         const ballBoxes = frame.boxes.filter(b => b.cls_id === 0);
-        const bestBall  = ballBoxes.length > 0
+        const bestBall = ballBoxes.length > 0
             ? ballBoxes.reduce((best, b) => b.conf > best.conf ? b : best)
             : null;
 
@@ -356,15 +373,15 @@ function App() {
         const stableIds = reidRef.current.update(detections);
 
         // ── Build CSS-ready player markers ────────────────────────────────
-        const colorByCls = { 1: '#4CAF50', 3: '#888888', 6: '#e63946', 7: '#ffffff' };
+        const colorByCls = {1: '#4CAF50', 3: '#888888', 6: '#e63946', 7: '#fbca00'};
 
         const playerMarkers = detections.map((det, i) => ({
-            id:     stableIds[i]?.toString() ?? `u${i}`,
+            id: stableIds[i]?.toString() ?? `u${i}`,
             // toCssX/Y maps metres → 0..100% from top-left, matching the pitch div layout
-            x:      toCssX(det.mx),
-            y:      toCssY(det.my),
-            label:  stableIds[i]?.toString() ?? '?',
-            color:  colorByCls[det.cls_id] ?? '#aaaaaa',
+            x: toCssX(det.mx),
+            y: toCssY(det.my),
+            label: stableIds[i]?.toString() ?? '?',
+            color: colorByCls[det.cls_id] ?? '#aaaaaa',
             isBall: false,
         }));
 
@@ -372,8 +389,8 @@ function App() {
             id: 'ball',
             x: toCssX(bestBall.pitch_x),
             y: toCssY(bestBall.pitch_y),
-            label:  '',
-            color:  '#ffffff',
+            label: '',
+            color: '#ffffff',
             isBall: true,
         }] : [];
 
@@ -402,12 +419,12 @@ function App() {
                 type: 'linear', // Ensure it treats frames as a continuous number line
                 min: 0,
                 max: TOTAL_MATCH_FRAMES,
-                grid: { display: false },
+                grid: {display: false},
                 ticks: {
                     color: '#888',
-                    font: { size: 10 },
+                    font: {size: 10},
                     maxTicksLimit: 10, // Shows labels roughly every 10 minutes
-                    callback: function(value) {
+                    callback: function (value) {
                         // value is the frame index.
                         // Convert frame index -> total seconds -> minutes
                         const minutes = Math.floor(value / (FPS * 60));
@@ -421,7 +438,7 @@ function App() {
                 display: false
             },
         },
-        plugins: { legend: { display: false } },
+        plugins: {legend: {display: false}},
         onClick: (event, elements, chart) => {
             const pos = getRelativePosition(event.native || event, chart);
             const targetFrame = Math.floor(chart.scales.x.getValueForPixel(pos.x));
@@ -441,7 +458,7 @@ function App() {
 
         try {
             const response = await fetch(event.jsonPath);
-            const newData  = await response.json();
+            const newData = await response.json();
 
             // Find which event we just loaded to set the correct 15' or 27' offset
             const idx = events.findIndex(e => e.jsonPath === event.jsonPath);
@@ -480,9 +497,42 @@ function App() {
     };
 
     const sendMessage = () => {
-        if (!inputValue.trim()) return;
-        setMessages([...messages, { sender: "Coach", message: inputValue }]);
+        const query = inputValue.trim();
+        if (!query) return;
+
+        // 1. Add the Coach message immediately
+        setMessages(prev => [...prev, { sender: "Coach", message: query }]);
         setInputValue("");
+
+        fetch('http://127.0.0.1:8000/ask-assistant', {
+            method: 'POST',
+            headers: {
+                'accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                user_query: query, // Use the local 'query' variable
+                session_id: "default_ses"
+            })
+        })
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(json => {
+                setMessages(prev => [
+                    ...prev,
+                    { sender: "AI", message: json.response }
+                ]);
+
+            })
+            .catch(e => {
+                console.error("Fetch error:", e);
+                setMessages(prev => [
+                    ...prev,
+                    { sender: "AI", message: "Sorry, I encountered an error." }
+                ]);
+            });
     };
 
     useEffect(() => {
@@ -500,6 +550,13 @@ function App() {
         if (activeEventIndex === 1) return 67 * 60 * FPS;
         return 0;
     };
+
+    useEffect(() => {
+        const el = chatEndRef.current;
+        if (!el) return;
+
+        el.scrollTop = el.scrollHeight;
+    }, [messages]);
 
     const getYPos = (min) => {
         const offsetFrames = getGlobalOffset();
@@ -528,8 +585,8 @@ function App() {
                     <div className="main-visual-column">
                         <div className="pitch-section">
                             <div className="view-toggle">
-                                <button className={viewMode === 'pitch' ? 'active' : ''} onClick={() => setViewMode('pitch')}>Tactical</button>
                                 <button className={viewMode === 'video' ? 'active' : ''} onClick={() => setViewMode('video')}>Video</button>
+                                <button className={viewMode === 'pitch' ? 'active' : ''} onClick={() => setViewMode('pitch')}>Tactical</button>
                             </div>
                             {viewMode === 'pitch' ? (
                                 <div className="pitch-container">
@@ -673,7 +730,7 @@ function App() {
                             <h4 className="section-title">KEY EVENTS</h4>
                             <div className="events-list">
                                 {events.map((ev, i) => (
-                                    <div key={i} className="event-item clickable-event" onClick={() => handleEventClick(ev)}>
+                                    <div key={i} className="event-item clickable-event" style={{display: (activeEventIndex === 0 && ev.jsonPath.includes("barca3") || (activeEventIndex === 1 && ev.jsonPath.includes("barca5"))) ? "block" : "none"}} onClick={() => handleEventClick(ev)}>
                                         <div className="event-meta">
                                             <span className="tag" style={{ backgroundColor: ev.color }}>{ev.type}</span>
                                             <span className="event-name">{ev.title}</span>
@@ -687,12 +744,16 @@ function App() {
 
                         <h4 className="section-title">AI ANALYST</h4>
                         <div className="chat-section">
-                            <div className="chat-messages">
+                            <div className="chat-messages" ref={chatEndRef}>
                                 {messages.map((msg, i) => (
                                     <div key={i} className={`message-wrapper ${msg.sender === "Coach" ? "align-right" : "align-left"}`}>
                                         <div className={`message ${msg.sender}`}>
-                                            <div className="sender-name">{msg.sender === "AI" ? "AI analyst" : "Coach"}</div>
-                                            <div className="message-text">{msg.message}</div>
+                                            <div className="sender-name">
+                                                {msg.sender === "AI" ? "AI analyst" : "Coach"}
+                                            </div>
+                                            <div className="message-text">
+                                                {msg.message}
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
