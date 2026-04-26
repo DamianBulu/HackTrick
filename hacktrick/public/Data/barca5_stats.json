@@ -1,0 +1,586 @@
+{
+  "pressing": {
+    "overall": {
+      "Team1": {
+        "total": 3,
+        "success": 3,
+        "failed": 0,
+        "ongoing": 0,
+        "success_rate_pct": 100.0,
+        "failure_rate_pct": 0.0
+      },
+      "Team2": {
+        "total": 6,
+        "success": 6,
+        "failed": 0,
+        "ongoing": 0,
+        "success_rate_pct": 100.0,
+        "failure_rate_pct": 0.0
+      }
+    },
+    "by_zone": {
+      "Team1": {
+        "Middle_Center": {
+          "total": 1,
+          "success": 1,
+          "failed": 0,
+          "ongoing": 0,
+          "success_rate_pct": 100.0,
+          "failure_rate_pct": 0.0
+        },
+        "Middle_Right": {
+          "total": 2,
+          "success": 2,
+          "failed": 0,
+          "ongoing": 0,
+          "success_rate_pct": 100.0,
+          "failure_rate_pct": 0.0
+        }
+      },
+      "Team2": {
+        "Middle_Left": {
+          "total": 3,
+          "success": 3,
+          "failed": 0,
+          "ongoing": 0,
+          "success_rate_pct": 100.0,
+          "failure_rate_pct": 0.0
+        },
+        "Middle_Center": {
+          "total": 3,
+          "success": 3,
+          "failed": 0,
+          "ongoing": 0,
+          "success_rate_pct": 100.0,
+          "failure_rate_pct": 0.0
+        }
+      }
+    },
+    "zone_heatmap": {
+      "Middle_Left": {
+        "presses": 3,
+        "recoveries": 3,
+        "recovery_rate_pct": 100.0
+      },
+      "Middle_Center": {
+        "presses": 4,
+        "recoveries": 4,
+        "recovery_rate_pct": 100.0
+      },
+      "Middle_Right": {
+        "presses": 2,
+        "recoveries": 2,
+        "recovery_rate_pct": 100.0
+      }
+    },
+    "best_recovery_zone": {
+      "Team1": "Middle_Center",
+      "Team2": "Middle_Left"
+    },
+    "worst_recovery_zone": {
+      "Team1": "Middle_Center",
+      "Team2": "Middle_Left"
+    },
+    "high_press_effectiveness": {
+      "Team1": {
+        "total": 0,
+        "success": 0,
+        "failed": 0,
+        "ongoing": 0,
+        "success_rate_pct": null,
+        "failure_rate_pct": null
+      },
+      "Team2": {
+        "total": 0,
+        "success": 0,
+        "failed": 0,
+        "ongoing": 0,
+        "success_rate_pct": null,
+        "failure_rate_pct": null
+      }
+    },
+    "total_sequences": 44,
+    "total_frames": 447
+  },
+  "defensive_shape": {
+    "Team1": {
+      "defending_frames": 306,
+      "shape_held_frames": 0,
+      "shape_held_pct": 0.0,
+      "shape_collapsed_frames": 272,
+      "shape_collapsed_pct": 88.9,
+      "longest_held_run_frames": 0,
+      "longest_held_run_s": 0.0,
+      "avg_compactness_while_defending_m": 21.47,
+      "worst_collapse_events": [
+        {
+          "start_frame": 112,
+          "end_frame": 160,
+          "duration_frames": 49,
+          "duration_s": 2.0,
+          "avg_compactness_m": 22.33
+        },
+        {
+          "start_frame": 0,
+          "end_frame": 26,
+          "duration_frames": 27,
+          "duration_s": 1.1,
+          "avg_compactness_m": 21.86
+        },
+        {
+          "start_frame": 309,
+          "end_frame": 331,
+          "duration_frames": 23,
+          "duration_s": 0.9,
+          "avg_compactness_m": 21.87
+        },
+        {
+          "start_frame": 176,
+          "end_frame": 197,
+          "duration_frames": 22,
+          "duration_s": 0.9,
+          "avg_compactness_m": 22.83
+        },
+        {
+          "start_frame": 30,
+          "end_frame": 47,
+          "duration_frames": 18,
+          "duration_s": 0.7,
+          "avg_compactness_m": 22.31
+        }
+      ],
+      "total_collapse_events": 14
+    },
+    "Team2": {
+      "defending_frames": 132,
+      "shape_held_frames": 0,
+      "shape_held_pct": 0.0,
+      "shape_collapsed_frames": 131,
+      "shape_collapsed_pct": 99.2,
+      "longest_held_run_frames": 0,
+      "longest_held_run_s": 0.0,
+      "avg_compactness_while_defending_m": 23.9,
+      "worst_collapse_events": [
+        {
+          "start_frame": 48,
+          "end_frame": 63,
+          "duration_frames": 16,
+          "duration_s": 0.6,
+          "avg_compactness_m": 23.1
+        },
+        {
+          "start_frame": 395,
+          "end_frame": 407,
+          "duration_frames": 13,
+          "duration_s": 0.5,
+          "avg_compactness_m": 23.5
+        },
+        {
+          "start_frame": 219,
+          "end_frame": 227,
+          "duration_frames": 9,
+          "duration_s": 0.4,
+          "avg_compactness_m": 21.41
+        },
+        {
+          "start_frame": 288,
+          "end_frame": 295,
+          "duration_frames": 8,
+          "duration_s": 0.3,
+          "avg_compactness_m": 25.22
+        },
+        {
+          "start_frame": 376,
+          "end_frame": 383,
+          "duration_frames": 8,
+          "duration_s": 0.3,
+          "avg_compactness_m": 21.01
+        }
+      ],
+      "total_collapse_events": 9
+    }
+  },
+  "between_lines": {
+    "Team1": {
+      "total_incursion_events": 17,
+      "total_frames_with_btl_player": 308,
+      "avg_attackers_btl_when_active": 5.92,
+      "worst_incursions": [
+        {
+          "start_frame": 112,
+          "end_frame": 160,
+          "duration_frames": 49,
+          "duration_s": 2.0,
+          "max_attackers_btl": 9
+        },
+        {
+          "start_frame": 299,
+          "end_frame": 343,
+          "duration_frames": 45,
+          "duration_s": 1.8,
+          "max_attackers_btl": 7
+        },
+        {
+          "start_frame": 0,
+          "end_frame": 26,
+          "duration_frames": 27,
+          "duration_s": 1.1,
+          "max_attackers_btl": 5
+        },
+        {
+          "start_frame": 176,
+          "end_frame": 197,
+          "duration_frames": 22,
+          "duration_s": 0.9,
+          "max_attackers_btl": 9
+        },
+        {
+          "start_frame": 420,
+          "end_frame": 441,
+          "duration_frames": 22,
+          "duration_s": 0.9,
+          "max_attackers_btl": 6
+        }
+      ]
+    },
+    "Team2": {
+      "total_incursion_events": 10,
+      "total_frames_with_btl_player": 132,
+      "avg_attackers_btl_when_active": 4.84,
+      "worst_incursions": [
+        {
+          "start_frame": 48,
+          "end_frame": 63,
+          "duration_frames": 16,
+          "duration_s": 0.6,
+          "max_attackers_btl": 5
+        },
+        {
+          "start_frame": 395,
+          "end_frame": 407,
+          "duration_frames": 13,
+          "duration_s": 0.5,
+          "max_attackers_btl": 6
+        },
+        {
+          "start_frame": 219,
+          "end_frame": 227,
+          "duration_frames": 9,
+          "duration_s": 0.4,
+          "max_attackers_btl": 4
+        },
+        {
+          "start_frame": 288,
+          "end_frame": 295,
+          "duration_frames": 8,
+          "duration_s": 0.3,
+          "max_attackers_btl": 7
+        },
+        {
+          "start_frame": 376,
+          "end_frame": 383,
+          "duration_frames": 8,
+          "duration_s": 0.3,
+          "max_attackers_btl": 5
+        }
+      ]
+    }
+  },
+  "marking": {
+    "Team1": {
+      "defending_frames_with_attackers": 315,
+      "frames_correctly_marked": 120,
+      "marking_coverage_pct": 38.1,
+      "frames_with_escaped_attacker": 315,
+      "escape_rate_pct": 100.0,
+      "avg_escape_distance_m": 11.8,
+      "max_escape_distance_m": 39.04,
+      "total_escape_events": 17,
+      "worst_escape_events": [
+        {
+          "start_frame": 104,
+          "end_frame": 160,
+          "duration_frames": 57,
+          "max_escaped": 20,
+          "duration_s": 2.3
+        },
+        {
+          "start_frame": 299,
+          "end_frame": 343,
+          "duration_frames": 45,
+          "max_escaped": 10,
+          "duration_s": 1.8
+        },
+        {
+          "start_frame": 0,
+          "end_frame": 26,
+          "duration_frames": 27,
+          "max_escaped": 10,
+          "duration_s": 1.1
+        },
+        {
+          "start_frame": 176,
+          "end_frame": 197,
+          "duration_frames": 22,
+          "max_escaped": 10,
+          "duration_s": 0.9
+        },
+        {
+          "start_frame": 420,
+          "end_frame": 441,
+          "duration_frames": 22,
+          "max_escaped": 11,
+          "duration_s": 0.9
+        }
+      ]
+    },
+    "Team2": {
+      "defending_frames_with_attackers": 132,
+      "frames_correctly_marked": 84,
+      "marking_coverage_pct": 63.6,
+      "frames_with_escaped_attacker": 132,
+      "escape_rate_pct": 100.0,
+      "avg_escape_distance_m": 9.68,
+      "max_escape_distance_m": 21.98,
+      "total_escape_events": 10,
+      "worst_escape_events": [
+        {
+          "start_frame": 48,
+          "end_frame": 63,
+          "duration_frames": 16,
+          "max_escaped": 8,
+          "duration_s": 0.6
+        },
+        {
+          "start_frame": 395,
+          "end_frame": 407,
+          "duration_frames": 13,
+          "max_escaped": 8,
+          "duration_s": 0.5
+        },
+        {
+          "start_frame": 219,
+          "end_frame": 227,
+          "duration_frames": 9,
+          "max_escaped": 9,
+          "duration_s": 0.4
+        },
+        {
+          "start_frame": 288,
+          "end_frame": 295,
+          "duration_frames": 8,
+          "max_escaped": 10,
+          "duration_s": 0.3
+        },
+        {
+          "start_frame": 376,
+          "end_frame": 383,
+          "duration_frames": 8,
+          "max_escaped": 7,
+          "duration_s": 0.3
+        }
+      ]
+    }
+  },
+  "compactness": {
+    "Team1": {
+      "frames_analysed": 438,
+      "avg_compactness_m": 21.33,
+      "min_compactness_m": 15.81,
+      "max_compactness_m": 24.86,
+      "std_compactness_m": 1.72,
+      "avg_compactness_defending_m": 21.47,
+      "avg_compactness_attacking_m": 21.02,
+      "distribution": {
+        "tight_pct": 0.0,
+        "medium_pct": 6.4,
+        "open_pct": 93.6
+      }
+    },
+    "Team2": {
+      "frames_analysed": 447,
+      "avg_compactness_m": 24.37,
+      "min_compactness_m": 17.13,
+      "max_compactness_m": 31.02,
+      "std_compactness_m": 2.31,
+      "avg_compactness_defending_m": 23.9,
+      "avg_compactness_attacking_m": 24.57,
+      "distribution": {
+        "tight_pct": 0.0,
+        "medium_pct": 0.4,
+        "open_pct": 99.6
+      }
+    }
+  },
+  "overloads": {
+    "by_zone": {
+      "Defensive_Center": {
+        "Team1_overloads": 0,
+        "Team2_overloads": 2,
+        "dominant": "Team2"
+      },
+      "Middle_Left": {
+        "Team1_overloads": 0,
+        "Team2_overloads": 1,
+        "dominant": "Team2"
+      },
+      "Middle_Center": {
+        "Team1_overloads": 0,
+        "Team2_overloads": 11,
+        "dominant": "Team2"
+      },
+      "Middle_Right": {
+        "Team1_overloads": 1,
+        "Team2_overloads": 4,
+        "dominant": "Team2"
+      },
+      "Attacking_Left": {
+        "Team1_overloads": 6,
+        "Team2_overloads": 1,
+        "dominant": "Team1"
+      },
+      "Attacking_Center": {
+        "Team1_overloads": 3,
+        "Team2_overloads": 3,
+        "dominant": "Equal"
+      },
+      "Attacking_Right": {
+        "Team1_overloads": 0,
+        "Team2_overloads": 5,
+        "dominant": "Team2"
+      }
+    },
+    "total_overloads": {
+      "Team1": 10,
+      "Team2": 27
+    },
+    "top_zones": {
+      "Team1": [
+        {
+          "zone": "Attacking_Left",
+          "count": 6
+        },
+        {
+          "zone": "Attacking_Center",
+          "count": 3
+        },
+        {
+          "zone": "Middle_Right",
+          "count": 1
+        }
+      ],
+      "Team2": [
+        {
+          "zone": "Middle_Center",
+          "count": 11
+        },
+        {
+          "zone": "Attacking_Right",
+          "count": 5
+        },
+        {
+          "zone": "Middle_Right",
+          "count": 4
+        },
+        {
+          "zone": "Attacking_Center",
+          "count": 3
+        },
+        {
+          "zone": "Defensive_Center",
+          "count": 2
+        }
+      ]
+    },
+    "worst_overload_events": {
+      "Team1": [
+        {
+          "start_frame": 182,
+          "end_frame": 327,
+          "duration_frames": 146,
+          "max_adv": 5,
+          "duration_s": 5.8,
+          "zone": "Attacking_Center"
+        },
+        {
+          "start_frame": 0,
+          "end_frame": 31,
+          "duration_frames": 32,
+          "max_adv": 2,
+          "duration_s": 1.3,
+          "zone": "Attacking_Center"
+        },
+        {
+          "start_frame": 137,
+          "end_frame": 149,
+          "duration_frames": 13,
+          "max_adv": 2,
+          "duration_s": 0.5,
+          "zone": "Attacking_Left"
+        },
+        {
+          "start_frame": 96,
+          "end_frame": 103,
+          "duration_frames": 8,
+          "max_adv": 2,
+          "duration_s": 0.3,
+          "zone": "Attacking_Left"
+        },
+        {
+          "start_frame": 129,
+          "end_frame": 134,
+          "duration_frames": 6,
+          "max_adv": 2,
+          "duration_s": 0.2,
+          "zone": "Attacking_Left"
+        }
+      ],
+      "Team2": [
+        {
+          "start_frame": 180,
+          "end_frame": 209,
+          "duration_frames": 30,
+          "max_adv": 4,
+          "duration_s": 1.2,
+          "zone": "Middle_Center"
+        },
+        {
+          "start_frame": 257,
+          "end_frame": 284,
+          "duration_frames": 28,
+          "max_adv": 3,
+          "duration_s": 1.1,
+          "zone": "Middle_Center"
+        },
+        {
+          "start_frame": 408,
+          "end_frame": 431,
+          "duration_frames": 24,
+          "max_adv": 3,
+          "duration_s": 1.0,
+          "zone": "Attacking_Right"
+        },
+        {
+          "start_frame": 211,
+          "end_frame": 230,
+          "duration_frames": 20,
+          "max_adv": 5,
+          "duration_s": 0.8,
+          "zone": "Middle_Center"
+        },
+        {
+          "start_frame": 289,
+          "end_frame": 304,
+          "duration_frames": 16,
+          "max_adv": 3,
+          "duration_s": 0.6,
+          "zone": "Attacking_Right"
+        }
+      ]
+    }
+  },
+  "_meta": {
+    "total_frames": 447,
+    "fps": 25.0
+  }
+}

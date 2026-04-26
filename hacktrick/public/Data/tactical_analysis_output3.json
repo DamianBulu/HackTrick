@@ -1,0 +1,3674 @@
+[
+  {
+    "context": {
+      "clip": "0-88",
+      "approx_match_minute": 0,
+      "duration_seconds": 3.5,
+      "fps": 25.0,
+      "team1": {
+        "avg_compactness_m": 22.25,
+        "avg_def_line_depth_m": 85.08,
+        "max_defensive_gap_m": 21.9
+      },
+      "team2": {
+        "avg_compactness_m": 25.89,
+        "avg_def_line_depth_m": 61.53,
+        "max_defensive_gap_m": 28.5
+      },
+      "possession_pct": {
+        "Team1": 33.3,
+        "Team2": 66.7
+      },
+      "possession_trend": "Team1 gaining possession",
+      "top_events": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "details": {
+            "gap_m": 21.55,
+            "compactness_m": 25.54,
+            "def_line_depth_m": 10.88,
+            "team_centroid_x": 49.9
+          },
+          "first_frame": 12,
+          "lifecycle": {
+            "start_frame": 12,
+            "peak_frame": 12,
+            "end_frame": 23,
+            "start_time_s": 0.5,
+            "peak_time_s": 0.5,
+            "duration_s": 0.4
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 30.77,
+              "def_line_depth_m": 101.28,
+              "max_gap_m": 26.86,
+              "centroid_x": 53.9
+            },
+            "peak": {
+              "compactness_m": 25.54,
+              "def_line_depth_m": 10.88,
+              "max_gap_m": 21.55,
+              "centroid_x": 49.9
+            },
+            "after": {
+              "compactness_m": 26.35,
+              "def_line_depth_m": 10.45,
+              "max_gap_m": 16.35,
+              "centroid_x": 51.0
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 left a significant hole in the defensive block in their defensive half.",
+            "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+            "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+            "why_it_matters": "That kind of gap gives an attacker time to receive, control and shoot. Opponents who read the game well will target this immediately.",
+            "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+          },
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 22,
+              "time_s": 0.9,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 22,
+              "time_s": 0.9,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "FREE_ATTACKER",
+              "team": "Team1",
+              "frame_id": 26,
+              "time_s": 1.0,
+              "relationship": "happened around the same time as free attacker"
+            }
+          ]
+        },
+        {
+          "type": "FREE_ATTACKER",
+          "team": "Team1",
+          "severity": 7,
+          "details": {
+            "defending_team": "Team1",
+            "attacking_team": "Team2",
+            "free_attackers": 1,
+            "in_final_third": true,
+            "max_space_m": 5.0,
+            "frames_unmarked": 6
+          },
+          "first_frame": 26,
+          "lifecycle": {
+            "start_frame": 20,
+            "peak_frame": 26,
+            "end_frame": 26,
+            "start_time_s": 0.8,
+            "peak_time_s": 1.0,
+            "duration_s": 0.2
+          },
+          "snapshots": {
+            "before": {},
+            "peak": {
+              "defending_team": "Team1",
+              "attacking_team": "Team2",
+              "free_attackers": 1,
+              "in_final_third": true,
+              "max_space_m": 5.0,
+              "frames_unmarked": 6
+            },
+            "after": {}
+          },
+          "story": {
+            "simple_summary": "One team2 attacker was completely free with no team1 player in range \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+            "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+            "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. One free attacker in this position is all it takes for a clear chance on goal.",
+            "why_it_matters": "Allowing an attacker to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+            "coach_tip": "Each Team1 defender must own their runner \u2014 especially late runs from midfield. When the ball moves wide, always check what's happening in behind. Call it out loudly."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 22,
+              "time_s": 0.9,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 22,
+              "time_s": 0.9,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team1",
+          "severity": 8,
+          "details": {
+            "gap_m": 15.97,
+            "compactness_m": 22.06,
+            "def_line_depth_m": 83.62,
+            "team_centroid_x": 59.1,
+            "attackers": 5,
+            "defenders": 2,
+            "zone": "final_third"
+          },
+          "first_frame": 22,
+          "lifecycle": {
+            "start_frame": 22,
+            "peak_frame": 22,
+            "end_frame": 29,
+            "start_time_s": 0.9,
+            "peak_time_s": 0.9,
+            "duration_s": 0.3
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 21.81,
+              "def_line_depth_m": 82.09,
+              "max_gap_m": 16.74,
+              "centroid_x": 57.9
+            },
+            "peak": {
+              "compactness_m": 22.06,
+              "def_line_depth_m": 83.62,
+              "max_gap_m": 15.97,
+              "centroid_x": 59.1
+            },
+            "after": {
+              "compactness_m": 23.11,
+              "def_line_depth_m": 84.6,
+              "max_gap_m": 15.37,
+              "centroid_x": 58.6
+            }
+          },
+          "story": {
+            "simple_summary": "Team1 had 5 attackers against just 2 defenders \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+            "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 5 attackers against just 2 defenders appeared right at the edge of the box.",
+            "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+            "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+            "coach_tip": "A midfielder needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 12,
+              "time_s": 0.5,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 22,
+              "time_s": 0.9,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "FREE_ATTACKER",
+              "team": "Team1",
+              "frame_id": 26,
+              "time_s": 1.0,
+              "relationship": "happened around the same time as free attacker"
+            }
+          ]
+        }
+      ],
+      "event_summaries": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "start_time_s": 0.5,
+          "peak_time_s": 0.5,
+          "duration_s": 0.4,
+          "simple_summary": "Team2 left a significant hole in the defensive block in their defensive half.",
+          "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "That kind of gap gives an attacker time to receive, control and shoot. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "happened around the same time as defensive gap"
+            }
+          ]
+        },
+        {
+          "type": "FREE_ATTACKER",
+          "team": "Team1",
+          "severity": 7,
+          "start_time_s": 0.8,
+          "peak_time_s": 1.0,
+          "duration_s": 0.2,
+          "simple_summary": "One team2 attacker was completely free with no team1 player in range \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+          "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+          "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. One free attacker in this position is all it takes for a clear chance on goal.",
+          "why_it_matters": "Allowing an attacker to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+          "coach_tip": "Each Team1 defender must own their runner \u2014 especially late runs from midfield. When the ball moves wide, always check what's happening in behind. Call it out loudly.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "happened around the same time as shape disorganised"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team1",
+          "severity": 8,
+          "start_time_s": 0.9,
+          "peak_time_s": 0.9,
+          "duration_s": 0.3,
+          "simple_summary": "Team1 had 5 attackers against just 2 defenders \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+          "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 5 attackers against just 2 defenders appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "happened around the same time as shape disorganised"
+            }
+          ]
+        }
+      ],
+      "worst_frame": 12,
+      "thresholds": {
+        "gap_critical_m": 16.0,
+        "gap_warning_m": 12.0,
+        "compactness_disorg_m": 18.0,
+        "high_def_line_m": 65.0,
+        "counterattack_shift_m": 9.0
+      }
+    },
+    "panel": {
+      "headline": "Gap opens in Team2's defence",
+      "badge": "DEFENSIVE_GAP",
+      "danger": 10,
+      "event_start": "0.5s",
+      "event_peak": "0.5s",
+      "what_happened": "Team2 left a significant hole in the defensive block in their defensive half.",
+      "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+      "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+      "why_it_matters": "That kind of gap gives an attacker time to receive, control and shoot. Opponents who read the game well will target this immediately.",
+      "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+      "timeline_tag": "gap in defensive line",
+      "confidence": "MEDIUM"
+    },
+    "events": [
+      {
+        "frame_id": 12,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team2",
+        "severity": 10,
+        "details": {
+          "gap_m": 21.55,
+          "compactness_m": 25.54,
+          "def_line_depth_m": 10.88,
+          "team_centroid_x": 49.9
+        },
+        "lifecycle": {
+          "start_frame": 12,
+          "peak_frame": 12,
+          "end_frame": 23,
+          "start_time_s": 0.5,
+          "peak_time_s": 0.5,
+          "duration_s": 0.4
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 30.77,
+            "def_line_depth_m": 101.28,
+            "max_gap_m": 26.86,
+            "centroid_x": 53.9
+          },
+          "peak": {
+            "compactness_m": 25.54,
+            "def_line_depth_m": 10.88,
+            "max_gap_m": 21.55,
+            "centroid_x": 49.9
+          },
+          "after": {
+            "compactness_m": 26.35,
+            "def_line_depth_m": 10.45,
+            "max_gap_m": 16.35,
+            "centroid_x": 51.0
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 left a significant hole in the defensive block in their defensive half.",
+          "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "That kind of gap gives an attacker time to receive, control and shoot. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 26,
+            "time_s": 1.0,
+            "relationship": "happened around the same time as free attacker"
+          }
+        ]
+      },
+      {
+        "frame_id": 12,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team2",
+        "severity": 6,
+        "details": {
+          "gap_m": 16.25,
+          "compactness_m": 26.38,
+          "def_line_depth_m": 10.55,
+          "team_centroid_x": 49.3
+        },
+        "lifecycle": {
+          "start_frame": 12,
+          "peak_frame": 20,
+          "end_frame": 23,
+          "start_time_s": 0.5,
+          "peak_time_s": 0.8,
+          "duration_s": 0.4
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 30.77,
+            "def_line_depth_m": 101.28,
+            "max_gap_m": 26.86,
+            "centroid_x": 53.9
+          },
+          "peak": {
+            "compactness_m": 26.38,
+            "def_line_depth_m": 10.55,
+            "max_gap_m": 16.25,
+            "centroid_x": 49.3
+          },
+          "after": {
+            "compactness_m": 26.35,
+            "def_line_depth_m": 10.45,
+            "max_gap_m": 16.35,
+            "centroid_x": 51.0
+          }
+        },
+        "story": {
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It was momentary but the opponent could have played into it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 26,
+            "time_s": 1.0,
+            "relationship": "happened around the same time as free attacker"
+          }
+        ]
+      },
+      {
+        "frame_id": 12,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team2",
+        "severity": 10,
+        "details": {
+          "gap_m": 21.55,
+          "compactness_m": 25.54,
+          "def_line_depth_m": 10.88,
+          "team_centroid_x": 49.9
+        },
+        "lifecycle": {
+          "start_frame": 12,
+          "peak_frame": 12,
+          "end_frame": 29,
+          "start_time_s": 0.5,
+          "peak_time_s": 0.5,
+          "duration_s": 0.7
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 30.77,
+            "def_line_depth_m": 101.28,
+            "max_gap_m": 26.86,
+            "centroid_x": 53.9
+          },
+          "peak": {
+            "compactness_m": 25.54,
+            "def_line_depth_m": 10.88,
+            "max_gap_m": 21.55,
+            "centroid_x": 49.9
+          },
+          "after": {
+            "compactness_m": 23.9,
+            "def_line_depth_m": 10.12,
+            "max_gap_m": 15.37,
+            "centroid_x": 51.7
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 left a significant hole in the defensive block in their defensive half.",
+          "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It stayed open long enough for the opponent to notice and threaten. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "That kind of gap gives an attacker time to receive, control and shoot. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 26,
+            "time_s": 1.0,
+            "relationship": "happened around the same time as free attacker"
+          }
+        ]
+      },
+      {
+        "frame_id": 22,
+        "type": "OVERLOAD",
+        "team": "Team1",
+        "severity": 8,
+        "details": {
+          "gap_m": 15.97,
+          "compactness_m": 22.06,
+          "def_line_depth_m": 83.62,
+          "team_centroid_x": 59.1,
+          "attackers": 5,
+          "defenders": 2,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 22,
+          "peak_frame": 22,
+          "end_frame": 29,
+          "start_time_s": 0.9,
+          "peak_time_s": 0.9,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 21.81,
+            "def_line_depth_m": 82.09,
+            "max_gap_m": 16.74,
+            "centroid_x": 57.9
+          },
+          "peak": {
+            "compactness_m": 22.06,
+            "def_line_depth_m": 83.62,
+            "max_gap_m": 15.97,
+            "centroid_x": 59.1
+          },
+          "after": {
+            "compactness_m": 23.11,
+            "def_line_depth_m": 84.6,
+            "max_gap_m": 15.37,
+            "centroid_x": 58.6
+          }
+        },
+        "story": {
+          "simple_summary": "Team1 had 5 attackers against just 2 defenders \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+          "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 5 attackers against just 2 defenders appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 26,
+            "time_s": 1.0,
+            "relationship": "happened around the same time as free attacker"
+          }
+        ]
+      },
+      {
+        "frame_id": 22,
+        "type": "OVERLOAD",
+        "team": "Team1",
+        "severity": 8,
+        "details": {
+          "gap_m": 15.97,
+          "compactness_m": 22.06,
+          "def_line_depth_m": 83.62,
+          "team_centroid_x": 59.1,
+          "attackers": 5,
+          "defenders": 3,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 22,
+          "peak_frame": 22,
+          "end_frame": 32,
+          "start_time_s": 0.9,
+          "peak_time_s": 0.9,
+          "duration_s": 0.4
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 21.81,
+            "def_line_depth_m": 82.09,
+            "max_gap_m": 16.74,
+            "centroid_x": 57.9
+          },
+          "peak": {
+            "compactness_m": 22.06,
+            "def_line_depth_m": 83.62,
+            "max_gap_m": 15.97,
+            "centroid_x": 59.1
+          },
+          "after": {
+            "compactness_m": 22.16,
+            "def_line_depth_m": 84.66,
+            "max_gap_m": 15.1,
+            "centroid_x": 60.0
+          }
+        },
+        "story": {
+          "simple_summary": "Team1 had 5 attackers against just 3 defenders \u2014 a two-on-one situation that gave the attacker real options right at the edge of the box.",
+          "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 5 attackers against just 3 defenders appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "The nearest Team2 player needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 26,
+            "time_s": 1.0,
+            "relationship": "happened around the same time as free attacker"
+          }
+        ]
+      },
+      {
+        "frame_id": 26,
+        "type": "FREE_ATTACKER",
+        "team": "Team1",
+        "severity": 7,
+        "details": {
+          "defending_team": "Team1",
+          "attacking_team": "Team2",
+          "free_attackers": 1,
+          "in_final_third": true,
+          "max_space_m": 5.0,
+          "frames_unmarked": 6
+        },
+        "lifecycle": {
+          "start_frame": 20,
+          "peak_frame": 26,
+          "end_frame": 26,
+          "start_time_s": 0.8,
+          "peak_time_s": 1.0,
+          "duration_s": 0.2
+        },
+        "snapshots": {
+          "before": {},
+          "peak": {
+            "defending_team": "Team1",
+            "attacking_team": "Team2",
+            "free_attackers": 1,
+            "in_final_third": true,
+            "max_space_m": 5.0,
+            "frames_unmarked": 6
+          },
+          "after": {}
+        },
+        "story": {
+          "simple_summary": "One team2 attacker was completely free with no team1 player in range \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+          "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+          "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. One free attacker in this position is all it takes for a clear chance on goal.",
+          "why_it_matters": "Allowing an attacker to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+          "coach_tip": "Each Team1 defender must own their runner \u2014 especially late runs from midfield. When the ball moves wide, always check what's happening in behind. Call it out loudly."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 12,
+            "time_s": 0.5,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      }
+    ],
+    "clip_index": 1,
+    "clip_range": [
+      0,
+      88
+    ]
+  },
+  {
+    "context": {
+      "clip": "89-177",
+      "approx_match_minute": 0,
+      "duration_seconds": 3.5,
+      "fps": 25.0,
+      "team1": {
+        "avg_compactness_m": 22.74,
+        "avg_def_line_depth_m": 84.61,
+        "max_defensive_gap_m": 42.9
+      },
+      "team2": {
+        "avg_compactness_m": 24.95,
+        "avg_def_line_depth_m": 63.14,
+        "max_defensive_gap_m": 33.9
+      },
+      "possession_pct": {
+        "Team1": 3.6,
+        "Team2": 96.4
+      },
+      "possession_trend": "Balanced",
+      "top_events": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 9,
+          "details": {
+            "gap_m": 16.95,
+            "compactness_m": 23.04,
+            "def_line_depth_m": 10.34,
+            "team_centroid_x": 49.8
+          },
+          "first_frame": 125,
+          "lifecycle": {
+            "start_frame": 125,
+            "peak_frame": 132,
+            "end_frame": 133,
+            "start_time_s": 5.0,
+            "peak_time_s": 5.3,
+            "duration_s": 0.3
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 23.71,
+              "def_line_depth_m": 12.36,
+              "max_gap_m": 20.4,
+              "centroid_x": 49.0
+            },
+            "peak": {
+              "compactness_m": 23.04,
+              "def_line_depth_m": 10.34,
+              "max_gap_m": 16.95,
+              "centroid_x": 49.8
+            },
+            "after": {
+              "compactness_m": 23.04,
+              "def_line_depth_m": 10.34,
+              "max_gap_m": 16.95,
+              "centroid_x": 49.8
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 left a noticeable gap that an alert attacker would target in their defensive half.",
+            "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+            "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+            "why_it_matters": "Even a moderate gap at that position is enough for a one-touch pass and a run through. Opponents who read the game well will target this immediately.",
+            "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+          },
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 89,
+              "time_s": 3.6,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 104,
+              "time_s": 4.2,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 104,
+              "time_s": 4.2,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "FREE_ATTACKER",
+          "team": "Team1",
+          "severity": 9,
+          "details": {
+            "defending_team": "Team1",
+            "attacking_team": "Team2",
+            "free_attackers": 3,
+            "in_final_third": true,
+            "max_space_m": 5.0,
+            "frames_unmarked": 6
+          },
+          "first_frame": 22,
+          "lifecycle": {
+            "start_frame": 16,
+            "peak_frame": 22,
+            "end_frame": 22,
+            "start_time_s": 0.6,
+            "peak_time_s": 0.9,
+            "duration_s": 0.2
+          },
+          "snapshots": {
+            "before": {},
+            "peak": {
+              "defending_team": "Team1",
+              "attacking_team": "Team2",
+              "free_attackers": 3,
+              "in_final_third": true,
+              "max_space_m": 5.0,
+              "frames_unmarked": 6
+            },
+            "after": {}
+          },
+          "story": {
+            "simple_summary": "Three or more team2 attackers were completely unmarked at the same time \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+            "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+            "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. That many free attackers at once points to a full defensive breakdown, not just one player's mistake.",
+            "why_it_matters": "Allowing multiple attackers to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+            "coach_tip": "Team1 defenders need to communicate about who is picking up which runner. When there are multiple attackers in the box, clear assignments prevent exactly this. When the ball moves wide, always check what's happening in behind. Call it out loudly."
+          },
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 89,
+              "time_s": 3.6,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 104,
+              "time_s": 4.2,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 104,
+              "time_s": 4.2,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team2",
+          "severity": 8,
+          "details": {
+            "gap_m": 11.21,
+            "compactness_m": 22.41,
+            "def_line_depth_m": 83.56,
+            "team_centroid_x": 55.1,
+            "attackers": 8,
+            "defenders": 1,
+            "zone": "final_third"
+          },
+          "first_frame": 104,
+          "lifecycle": {
+            "start_frame": 104,
+            "peak_frame": 104,
+            "end_frame": 111,
+            "start_time_s": 4.2,
+            "peak_time_s": 4.2,
+            "duration_s": 0.3
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 22.63,
+              "def_line_depth_m": 13.78,
+              "max_gap_m": 14.38,
+              "centroid_x": 50.9
+            },
+            "peak": {
+              "compactness_m": 22.41,
+              "def_line_depth_m": 83.56,
+              "max_gap_m": 11.21,
+              "centroid_x": 55.1
+            },
+            "after": {
+              "compactness_m": 23.64,
+              "def_line_depth_m": 82.09,
+              "max_gap_m": 11.93,
+              "centroid_x": 55.4
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 had 8 attackers against just 1 defender \u2014 a massive numerical mismatch \u2014 the defence was completely outnumbered right at the edge of the box.",
+            "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 8 attackers against just 1 defender appeared right at the edge of the box.",
+            "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+            "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+            "coach_tip": "A midfielder needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+          },
+          "related_events": [
+            {
+              "type": "FREE_ATTACKER",
+              "team": "Team1",
+              "frame_id": 22,
+              "time_s": 0.9,
+              "relationship": "happened around the same time as free attacker"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 89,
+              "time_s": 3.6,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 104,
+              "time_s": 4.2,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 125,
+              "time_s": 5.0,
+              "relationship": "happened around the same time as defensive gap"
+            }
+          ]
+        }
+      ],
+      "event_summaries": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 9,
+          "start_time_s": 5.0,
+          "peak_time_s": 5.3,
+          "duration_s": 0.3,
+          "simple_summary": "Team2 left a noticeable gap that an alert attacker would target in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "Even a moderate gap at that position is enough for a one-touch pass and a run through. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "FREE_ATTACKER",
+          "team": "Team1",
+          "severity": 9,
+          "start_time_s": 0.6,
+          "peak_time_s": 0.9,
+          "duration_s": 0.2,
+          "simple_summary": "Three or more team2 attackers were completely unmarked at the same time \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+          "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+          "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. That many free attackers at once points to a full defensive breakdown, not just one player's mistake.",
+          "why_it_matters": "Allowing multiple attackers to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+          "coach_tip": "Team1 defenders need to communicate about who is picking up which runner. When there are multiple attackers in the box, clear assignments prevent exactly this. When the ball moves wide, always check what's happening in behind. Call it out loudly.",
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "OVERLOAD",
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team2",
+          "severity": 8,
+          "start_time_s": 4.2,
+          "peak_time_s": 4.2,
+          "duration_s": 0.3,
+          "simple_summary": "Team2 had 8 attackers against just 1 defender \u2014 a massive numerical mismatch \u2014 the defence was completely outnumbered right at the edge of the box.",
+          "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 8 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after.",
+          "related_events": [
+            {
+              "type": "FREE_ATTACKER",
+              "relationship": "happened around the same time as free attacker"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "happened around the same time as shape disorganised"
+            }
+          ]
+        }
+      ],
+      "worst_frame": 125,
+      "thresholds": {
+        "gap_critical_m": 16.0,
+        "gap_warning_m": 12.0,
+        "compactness_disorg_m": 18.0,
+        "high_def_line_m": 65.0,
+        "counterattack_shift_m": 9.0
+      }
+    },
+    "panel": {
+      "headline": "Gap opens in Team2's defence",
+      "badge": "DEFENSIVE_GAP",
+      "danger": 9,
+      "event_start": "5.0s",
+      "event_peak": "5.3s",
+      "what_happened": "Team2 left a noticeable gap that an alert attacker would target in their defensive half.",
+      "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+      "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+      "why_it_matters": "Even a moderate gap at that position is enough for a one-touch pass and a run through. Opponents who read the game well will target this immediately.",
+      "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+      "timeline_tag": "gap in defensive line",
+      "confidence": "MEDIUM"
+    },
+    "events": [
+      {
+        "frame_id": 22,
+        "type": "FREE_ATTACKER",
+        "team": "Team1",
+        "severity": 9,
+        "details": {
+          "defending_team": "Team1",
+          "attacking_team": "Team2",
+          "free_attackers": 3,
+          "in_final_third": true,
+          "max_space_m": 5.0,
+          "frames_unmarked": 6
+        },
+        "lifecycle": {
+          "start_frame": 16,
+          "peak_frame": 22,
+          "end_frame": 22,
+          "start_time_s": 0.6,
+          "peak_time_s": 0.9,
+          "duration_s": 0.2
+        },
+        "snapshots": {
+          "before": {},
+          "peak": {
+            "defending_team": "Team1",
+            "attacking_team": "Team2",
+            "free_attackers": 3,
+            "in_final_third": true,
+            "max_space_m": 5.0,
+            "frames_unmarked": 6
+          },
+          "after": {}
+        },
+        "story": {
+          "simple_summary": "Three or more team2 attackers were completely unmarked at the same time \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+          "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+          "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. That many free attackers at once points to a full defensive breakdown, not just one player's mistake.",
+          "why_it_matters": "Allowing multiple attackers to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+          "coach_tip": "Team1 defenders need to communicate about who is picking up which runner. When there are multiple attackers in the box, clear assignments prevent exactly this. When the ball moves wide, always check what's happening in behind. Call it out loudly."
+        },
+        "related_events": [
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 89,
+            "time_s": 3.6,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 89,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team2",
+        "severity": 6,
+        "details": {
+          "gap_m": 16.84,
+          "compactness_m": 25.99,
+          "def_line_depth_m": 14.11,
+          "team_centroid_x": 52.2
+        },
+        "lifecycle": {
+          "start_frame": 89,
+          "peak_frame": 89,
+          "end_frame": 96,
+          "start_time_s": 3.6,
+          "peak_time_s": 3.6,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 25.99,
+            "def_line_depth_m": 14.11,
+            "max_gap_m": 16.84,
+            "centroid_x": 52.2
+          },
+          "peak": {
+            "compactness_m": 25.99,
+            "def_line_depth_m": 14.11,
+            "max_gap_m": 16.84,
+            "centroid_x": 52.2
+          },
+          "after": {
+            "compactness_m": 22.63,
+            "def_line_depth_m": 13.78,
+            "max_gap_m": 14.38,
+            "centroid_x": 50.9
+          }
+        },
+        "story": {
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It was momentary but the opponent could have played into it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as free attacker"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 125,
+            "time_s": 5.0,
+            "relationship": "poor shape contributed to the gap opening"
+          }
+        ]
+      },
+      {
+        "frame_id": 104,
+        "type": "OVERLOAD",
+        "team": "Team2",
+        "severity": 8,
+        "details": {
+          "gap_m": 11.21,
+          "compactness_m": 22.41,
+          "def_line_depth_m": 83.56,
+          "team_centroid_x": 55.1,
+          "attackers": 8,
+          "defenders": 1,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 104,
+          "peak_frame": 104,
+          "end_frame": 111,
+          "start_time_s": 4.2,
+          "peak_time_s": 4.2,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 22.63,
+            "def_line_depth_m": 13.78,
+            "max_gap_m": 14.38,
+            "centroid_x": 50.9
+          },
+          "peak": {
+            "compactness_m": 22.41,
+            "def_line_depth_m": 83.56,
+            "max_gap_m": 11.21,
+            "centroid_x": 55.1
+          },
+          "after": {
+            "compactness_m": 23.64,
+            "def_line_depth_m": 82.09,
+            "max_gap_m": 11.93,
+            "centroid_x": 55.4
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 had 8 attackers against just 1 defender \u2014 a massive numerical mismatch \u2014 the defence was completely outnumbered right at the edge of the box.",
+          "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 8 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as free attacker"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 89,
+            "time_s": 3.6,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 125,
+            "time_s": 5.0,
+            "relationship": "happened around the same time as defensive gap"
+          }
+        ]
+      },
+      {
+        "frame_id": 104,
+        "type": "OVERLOAD",
+        "team": "Team2",
+        "severity": 8,
+        "details": {
+          "gap_m": 11.21,
+          "compactness_m": 22.41,
+          "def_line_depth_m": 83.56,
+          "team_centroid_x": 55.1,
+          "attackers": 4,
+          "defenders": 5,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 104,
+          "peak_frame": 104,
+          "end_frame": 112,
+          "start_time_s": 4.2,
+          "peak_time_s": 4.2,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 22.63,
+            "def_line_depth_m": 13.78,
+            "max_gap_m": 14.38,
+            "centroid_x": 50.9
+          },
+          "peak": {
+            "compactness_m": 22.41,
+            "def_line_depth_m": 83.56,
+            "max_gap_m": 11.21,
+            "centroid_x": 55.1
+          },
+          "after": {
+            "compactness_m": 25.75,
+            "def_line_depth_m": 104.34,
+            "max_gap_m": 27.78,
+            "centroid_x": 54.7
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 had 4 attackers against just 5 defenders \u2014 a two-on-one situation that gave the attacker real options right at the edge of the box.",
+          "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 4 attackers against just 5 defenders appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "The nearest Team1 player needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "FREE_ATTACKER",
+            "team": "Team1",
+            "frame_id": 22,
+            "time_s": 0.9,
+            "relationship": "happened around the same time as free attacker"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 89,
+            "time_s": 3.6,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 125,
+            "time_s": 5.0,
+            "relationship": "happened around the same time as defensive gap"
+          }
+        ]
+      },
+      {
+        "frame_id": 125,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team2",
+        "severity": 9,
+        "details": {
+          "gap_m": 16.95,
+          "compactness_m": 23.04,
+          "def_line_depth_m": 10.34,
+          "team_centroid_x": 49.8
+        },
+        "lifecycle": {
+          "start_frame": 125,
+          "peak_frame": 132,
+          "end_frame": 133,
+          "start_time_s": 5.0,
+          "peak_time_s": 5.3,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 23.71,
+            "def_line_depth_m": 12.36,
+            "max_gap_m": 20.4,
+            "centroid_x": 49.0
+          },
+          "peak": {
+            "compactness_m": 23.04,
+            "def_line_depth_m": 10.34,
+            "max_gap_m": 16.95,
+            "centroid_x": 49.8
+          },
+          "after": {
+            "compactness_m": 23.04,
+            "def_line_depth_m": 10.34,
+            "max_gap_m": 16.95,
+            "centroid_x": 49.8
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 left a noticeable gap that an alert attacker would target in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "Even a moderate gap at that position is enough for a one-touch pass and a run through. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 89,
+            "time_s": 3.6,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 104,
+            "time_s": 4.2,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      }
+    ],
+    "clip_index": 2,
+    "clip_range": [
+      89,
+      177
+    ]
+  },
+  {
+    "context": {
+      "clip": "178-266",
+      "approx_match_minute": 0,
+      "duration_seconds": 3.5,
+      "fps": 25.0,
+      "team1": {
+        "avg_compactness_m": 21.34,
+        "avg_def_line_depth_m": 78.65,
+        "max_defensive_gap_m": 25.1
+      },
+      "team2": {
+        "avg_compactness_m": 23.07,
+        "avg_def_line_depth_m": 52.38,
+        "max_defensive_gap_m": 37.3
+      },
+      "possession_pct": {
+        "Team1": 50.0,
+        "Team2": 50.0
+      },
+      "possession_trend": "Team2 gaining possession",
+      "top_events": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "details": {
+            "gap_m": 33.69,
+            "compactness_m": 25.65,
+            "def_line_depth_m": 7.0,
+            "team_centroid_x": 51.2
+          },
+          "first_frame": 178,
+          "lifecycle": {
+            "start_frame": 178,
+            "peak_frame": 193,
+            "end_frame": 196,
+            "start_time_s": 7.1,
+            "peak_time_s": 7.7,
+            "duration_s": 0.7
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 23.35,
+              "def_line_depth_m": 6.73,
+              "max_gap_m": 22.15,
+              "centroid_x": 49.2
+            },
+            "peak": {
+              "compactness_m": 25.65,
+              "def_line_depth_m": 7.0,
+              "max_gap_m": 33.69,
+              "centroid_x": 51.2
+            },
+            "after": {
+              "compactness_m": 22.28,
+              "def_line_depth_m": 6.95,
+              "max_gap_m": 22.1,
+              "centroid_x": 48.2
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+            "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+            "how_it_developed": "It stayed open long enough for the opponent to notice and threaten. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+            "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+            "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+          },
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 178,
+              "time_s": 7.1,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 184,
+              "time_s": 7.4,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 184,
+              "time_s": 7.4,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team1",
+          "severity": 8,
+          "details": {
+            "gap_m": 12.58,
+            "compactness_m": 22.95,
+            "def_line_depth_m": 80.5,
+            "team_centroid_x": 58.4,
+            "attackers": 4,
+            "defenders": 1,
+            "zone": "final_third"
+          },
+          "first_frame": 184,
+          "lifecycle": {
+            "start_frame": 184,
+            "peak_frame": 185,
+            "end_frame": 191,
+            "start_time_s": 7.4,
+            "peak_time_s": 7.4,
+            "duration_s": 0.3
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 24.34,
+              "def_line_depth_m": 80.77,
+              "max_gap_m": 12.19,
+              "centroid_x": 55.3
+            },
+            "peak": {
+              "compactness_m": 22.95,
+              "def_line_depth_m": 80.5,
+              "max_gap_m": 12.58,
+              "centroid_x": 58.4
+            },
+            "after": {
+              "compactness_m": 22.55,
+              "def_line_depth_m": 80.23,
+              "max_gap_m": 13.34,
+              "centroid_x": 57.3
+            }
+          },
+          "story": {
+            "simple_summary": "Team1 had 4 attackers against just 1 defender \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+            "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 4 attackers against just 1 defender appeared right at the edge of the box.",
+            "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+            "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+            "coach_tip": "A midfielder needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 178,
+              "time_s": 7.1,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 178,
+              "time_s": 7.1,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 184,
+              "time_s": 7.4,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "SHAPE_DISORGANISED",
+          "team": "Team2",
+          "severity": 6,
+          "details": {
+            "gap_m": 33.69,
+            "compactness_m": 25.65,
+            "def_line_depth_m": 7.0,
+            "team_centroid_x": 51.2
+          },
+          "first_frame": 178,
+          "lifecycle": {
+            "start_frame": 178,
+            "peak_frame": 193,
+            "end_frame": 196,
+            "start_time_s": 7.1,
+            "peak_time_s": 7.7,
+            "duration_s": 0.7
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 23.35,
+              "def_line_depth_m": 6.73,
+              "max_gap_m": 22.15,
+              "centroid_x": 49.2
+            },
+            "peak": {
+              "compactness_m": 25.65,
+              "def_line_depth_m": 7.0,
+              "max_gap_m": 33.69,
+              "centroid_x": 51.2
+            },
+            "after": {
+              "compactness_m": 22.28,
+              "def_line_depth_m": 6.95,
+              "max_gap_m": 22.1,
+              "centroid_x": 48.2
+            }
+          },
+          "story": {
+            "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+            "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+            "how_it_developed": "The disorganisation held for a few seconds \u2014 enough time for a threatening ball in. With the block this open, passing lanes appeared between and behind Team2's lines.",
+            "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+            "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 178,
+              "time_s": 7.1,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 184,
+              "time_s": 7.4,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team1",
+              "frame_id": 184,
+              "time_s": 7.4,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        }
+      ],
+      "event_summaries": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "start_time_s": 7.1,
+          "peak_time_s": 7.7,
+          "duration_s": 0.7,
+          "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It stayed open long enough for the opponent to notice and threaten. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team1",
+          "severity": 8,
+          "start_time_s": 7.4,
+          "peak_time_s": 7.4,
+          "duration_s": 0.3,
+          "simple_summary": "Team1 had 4 attackers against just 1 defender \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+          "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 4 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "happened around the same time as shape disorganised"
+            }
+          ]
+        },
+        {
+          "type": "SHAPE_DISORGANISED",
+          "team": "Team2",
+          "severity": 6,
+          "start_time_s": 7.1,
+          "peak_time_s": 7.7,
+          "duration_s": 0.7,
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "The disorganisation held for a few seconds \u2014 enough time for a threatening ball in. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        }
+      ],
+      "worst_frame": 178,
+      "thresholds": {
+        "gap_critical_m": 16.0,
+        "gap_warning_m": 12.0,
+        "compactness_disorg_m": 18.0,
+        "high_def_line_m": 65.0,
+        "counterattack_shift_m": 9.0
+      }
+    },
+    "panel": {
+      "headline": "Gap opens in Team2's defence",
+      "badge": "DEFENSIVE_GAP",
+      "danger": 10,
+      "event_start": "7.1s",
+      "event_peak": "7.7s",
+      "what_happened": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+      "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+      "how_it_developed": "It stayed open long enough for the opponent to notice and threaten. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+      "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+      "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+      "timeline_tag": "gap in defensive line",
+      "confidence": "MEDIUM"
+    },
+    "events": [
+      {
+        "frame_id": 178,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team2",
+        "severity": 10,
+        "details": {
+          "gap_m": 33.69,
+          "compactness_m": 25.65,
+          "def_line_depth_m": 7.0,
+          "team_centroid_x": 51.2
+        },
+        "lifecycle": {
+          "start_frame": 178,
+          "peak_frame": 193,
+          "end_frame": 196,
+          "start_time_s": 7.1,
+          "peak_time_s": 7.7,
+          "duration_s": 0.7
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 23.35,
+            "def_line_depth_m": 6.73,
+            "max_gap_m": 22.15,
+            "centroid_x": 49.2
+          },
+          "peak": {
+            "compactness_m": 25.65,
+            "def_line_depth_m": 7.0,
+            "max_gap_m": 33.69,
+            "centroid_x": 51.2
+          },
+          "after": {
+            "compactness_m": 22.28,
+            "def_line_depth_m": 6.95,
+            "max_gap_m": 22.1,
+            "centroid_x": 48.2
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The whole defensive shape was too spread \u2014 this wasn't an isolated gap. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It stayed open long enough for the opponent to notice and threaten. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 178,
+            "time_s": 7.1,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 184,
+            "time_s": 7.4,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 184,
+            "time_s": 7.4,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 178,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team2",
+        "severity": 6,
+        "details": {
+          "gap_m": 33.69,
+          "compactness_m": 25.65,
+          "def_line_depth_m": 7.0,
+          "team_centroid_x": 51.2
+        },
+        "lifecycle": {
+          "start_frame": 178,
+          "peak_frame": 193,
+          "end_frame": 196,
+          "start_time_s": 7.1,
+          "peak_time_s": 7.7,
+          "duration_s": 0.7
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 23.35,
+            "def_line_depth_m": 6.73,
+            "max_gap_m": 22.15,
+            "centroid_x": 49.2
+          },
+          "peak": {
+            "compactness_m": 25.65,
+            "def_line_depth_m": 7.0,
+            "max_gap_m": 33.69,
+            "centroid_x": 51.2
+          },
+          "after": {
+            "compactness_m": 22.28,
+            "def_line_depth_m": 6.95,
+            "max_gap_m": 22.1,
+            "centroid_x": 48.2
+          }
+        },
+        "story": {
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "The disorganisation held for a few seconds \u2014 enough time for a threatening ball in. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 178,
+            "time_s": 7.1,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 184,
+            "time_s": 7.4,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 184,
+            "time_s": 7.4,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 184,
+        "type": "OVERLOAD",
+        "team": "Team1",
+        "severity": 8,
+        "details": {
+          "gap_m": 12.58,
+          "compactness_m": 22.95,
+          "def_line_depth_m": 80.5,
+          "team_centroid_x": 58.4,
+          "attackers": 4,
+          "defenders": 1,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 184,
+          "peak_frame": 185,
+          "end_frame": 191,
+          "start_time_s": 7.4,
+          "peak_time_s": 7.4,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 24.34,
+            "def_line_depth_m": 80.77,
+            "max_gap_m": 12.19,
+            "centroid_x": 55.3
+          },
+          "peak": {
+            "compactness_m": 22.95,
+            "def_line_depth_m": 80.5,
+            "max_gap_m": 12.58,
+            "centroid_x": 58.4
+          },
+          "after": {
+            "compactness_m": 22.55,
+            "def_line_depth_m": 80.23,
+            "max_gap_m": 13.34,
+            "centroid_x": 57.3
+          }
+        },
+        "story": {
+          "simple_summary": "Team1 had 4 attackers against just 1 defender \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+          "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 4 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team2's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 178,
+            "time_s": 7.1,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 178,
+            "time_s": 7.1,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 184,
+            "time_s": 7.4,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 184,
+        "type": "OVERLOAD",
+        "team": "Team1",
+        "severity": 8,
+        "details": {
+          "gap_m": 14.05,
+          "compactness_m": 21.13,
+          "def_line_depth_m": 80.01,
+          "team_centroid_x": 58.9,
+          "attackers": 3,
+          "defenders": 1,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 184,
+          "peak_frame": 198,
+          "end_frame": 227,
+          "start_time_s": 7.4,
+          "peak_time_s": 7.9,
+          "duration_s": 1.7
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 24.34,
+            "def_line_depth_m": 80.77,
+            "max_gap_m": 12.19,
+            "centroid_x": 55.3
+          },
+          "peak": {
+            "compactness_m": 21.13,
+            "def_line_depth_m": 80.01,
+            "max_gap_m": 14.05,
+            "centroid_x": 58.9
+          },
+          "after": {
+            "compactness_m": 20.89,
+            "def_line_depth_m": 77.44,
+            "max_gap_m": 18.38,
+            "centroid_x": 56.8
+          }
+        },
+        "story": {
+          "simple_summary": "Team1 had 3 attackers against just 1 defender \u2014 a two-on-one situation that gave the attacker real options right at the edge of the box.",
+          "how_it_started": "Team1 runners moved forward and Team2 didn't track them. 3 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "The overload lasted long enough to create a genuine chance. Team2's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "The nearest Team2 player needs to track the runners earlier. By the time Team2 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 178,
+            "time_s": 7.1,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 178,
+            "time_s": 7.1,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team1",
+            "frame_id": 184,
+            "time_s": 7.4,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      }
+    ],
+    "clip_index": 3,
+    "clip_range": [
+      178,
+      266
+    ]
+  },
+  {
+    "context": {
+      "clip": "267-355",
+      "approx_match_minute": 0,
+      "duration_seconds": 3.5,
+      "fps": 25.0,
+      "team1": {
+        "avg_compactness_m": 21.08,
+        "avg_def_line_depth_m": 78.91,
+        "max_defensive_gap_m": 29.5
+      },
+      "team2": {
+        "avg_compactness_m": 25.5,
+        "avg_def_line_depth_m": 82.46,
+        "max_defensive_gap_m": 32.3
+      },
+      "possession_pct": {
+        "Team1": 40.0,
+        "Team2": 60.0
+      },
+      "possession_trend": "Team1 gaining possession",
+      "top_events": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "details": {
+            "gap_m": 31.99,
+            "compactness_m": 22.92,
+            "def_line_depth_m": 11.65,
+            "team_centroid_x": 50.9
+          },
+          "first_frame": 299,
+          "lifecycle": {
+            "start_frame": 299,
+            "peak_frame": 347,
+            "end_frame": 348,
+            "start_time_s": 12.0,
+            "peak_time_s": 13.9,
+            "duration_s": 2.0
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 24.89,
+              "def_line_depth_m": 97.23,
+              "max_gap_m": 17.61,
+              "centroid_x": 59.0
+            },
+            "peak": {
+              "compactness_m": 22.92,
+              "def_line_depth_m": 11.65,
+              "max_gap_m": 31.99,
+              "centroid_x": 50.9
+            },
+            "after": {
+              "compactness_m": 24.58,
+              "def_line_depth_m": 11.7,
+              "max_gap_m": 31.28,
+              "centroid_x": 50.2
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+            "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+            "how_it_developed": "The gap persisted for several seconds \u2014 the defence couldn't correct it quickly. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+            "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+            "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+          },
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 299,
+              "time_s": 12.0,
+              "relationship": "poor shape contributed to the gap opening"
+            }
+          ]
+        },
+        {
+          "type": "FREE_ATTACKER",
+          "team": "Team1",
+          "severity": 7,
+          "details": {
+            "defending_team": "Team1",
+            "attacking_team": "Team2",
+            "free_attackers": 1,
+            "in_final_third": true,
+            "max_space_m": 5.0,
+            "frames_unmarked": 6
+          },
+          "first_frame": 37,
+          "lifecycle": {
+            "start_frame": 31,
+            "peak_frame": 37,
+            "end_frame": 37,
+            "start_time_s": 1.2,
+            "peak_time_s": 1.5,
+            "duration_s": 0.2
+          },
+          "snapshots": {
+            "before": {},
+            "peak": {
+              "defending_team": "Team1",
+              "attacking_team": "Team2",
+              "free_attackers": 1,
+              "in_final_third": true,
+              "max_space_m": 5.0,
+              "frames_unmarked": 6
+            },
+            "after": {}
+          },
+          "story": {
+            "simple_summary": "One team2 attacker was completely free with no team1 player in range \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+            "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+            "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. One free attacker in this position is all it takes for a clear chance on goal.",
+            "why_it_matters": "Allowing an attacker to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+            "coach_tip": "Each Team1 defender must own their runner \u2014 especially late runs from midfield. When the ball moves wide, always check what's happening in behind. Call it out loudly."
+          },
+          "related_events": []
+        },
+        {
+          "type": "SHAPE_DISORGANISED",
+          "team": "Team2",
+          "severity": 6,
+          "details": {
+            "gap_m": 22.69,
+            "compactness_m": 27.53,
+            "def_line_depth_m": 10.66,
+            "team_centroid_x": 51.8
+          },
+          "first_frame": 299,
+          "lifecycle": {
+            "start_frame": 299,
+            "peak_frame": 332,
+            "end_frame": 348,
+            "start_time_s": 12.0,
+            "peak_time_s": 13.3,
+            "duration_s": 2.0
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 24.89,
+              "def_line_depth_m": 97.23,
+              "max_gap_m": 17.61,
+              "centroid_x": 59.0
+            },
+            "peak": {
+              "compactness_m": 27.53,
+              "def_line_depth_m": 10.66,
+              "max_gap_m": 22.69,
+              "centroid_x": 51.8
+            },
+            "after": {
+              "compactness_m": 24.58,
+              "def_line_depth_m": 11.7,
+              "max_gap_m": 31.28,
+              "centroid_x": 50.2
+            }
+          },
+          "story": {
+            "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+            "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+            "how_it_developed": "It lasted long enough that the opponent had multiple opportunities to exploit it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+            "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+            "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 299,
+              "time_s": 12.0,
+              "relationship": "poor shape contributed to the gap opening"
+            }
+          ]
+        }
+      ],
+      "event_summaries": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "start_time_s": 12.0,
+          "peak_time_s": 13.9,
+          "duration_s": 2.0,
+          "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "The gap persisted for several seconds \u2014 the defence couldn't correct it quickly. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "poor shape contributed to the gap opening"
+            }
+          ]
+        },
+        {
+          "type": "FREE_ATTACKER",
+          "team": "Team1",
+          "severity": 7,
+          "start_time_s": 1.2,
+          "peak_time_s": 1.5,
+          "duration_s": 0.2,
+          "simple_summary": "One team2 attacker was completely free with no team1 player in range \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+          "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+          "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. One free attacker in this position is all it takes for a clear chance on goal.",
+          "why_it_matters": "Allowing an attacker to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+          "coach_tip": "Each Team1 defender must own their runner \u2014 especially late runs from midfield. When the ball moves wide, always check what's happening in behind. Call it out loudly.",
+          "related_events": []
+        },
+        {
+          "type": "SHAPE_DISORGANISED",
+          "team": "Team2",
+          "severity": 6,
+          "start_time_s": 12.0,
+          "peak_time_s": 13.3,
+          "duration_s": 2.0,
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It lasted long enough that the opponent had multiple opportunities to exploit it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "poor shape contributed to the gap opening"
+            }
+          ]
+        }
+      ],
+      "worst_frame": 299,
+      "thresholds": {
+        "gap_critical_m": 16.0,
+        "gap_warning_m": 12.0,
+        "compactness_disorg_m": 18.0,
+        "high_def_line_m": 65.0,
+        "counterattack_shift_m": 9.0
+      }
+    },
+    "panel": {
+      "headline": "Gap opens in Team2's defence",
+      "badge": "DEFENSIVE_GAP",
+      "danger": 10,
+      "event_start": "12.0s",
+      "event_peak": "13.9s",
+      "what_happened": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+      "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+      "how_it_developed": "The gap persisted for several seconds \u2014 the defence couldn't correct it quickly. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+      "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+      "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+      "timeline_tag": "gap in defensive line",
+      "confidence": "MEDIUM"
+    },
+    "events": [
+      {
+        "frame_id": 37,
+        "type": "FREE_ATTACKER",
+        "team": "Team1",
+        "severity": 7,
+        "details": {
+          "defending_team": "Team1",
+          "attacking_team": "Team2",
+          "free_attackers": 1,
+          "in_final_third": true,
+          "max_space_m": 5.0,
+          "frames_unmarked": 6
+        },
+        "lifecycle": {
+          "start_frame": 31,
+          "peak_frame": 37,
+          "end_frame": 37,
+          "start_time_s": 1.2,
+          "peak_time_s": 1.5,
+          "duration_s": 0.2
+        },
+        "snapshots": {
+          "before": {},
+          "peak": {
+            "defending_team": "Team1",
+            "attacking_team": "Team2",
+            "free_attackers": 1,
+            "in_final_third": true,
+            "max_space_m": 5.0,
+            "frames_unmarked": 6
+          },
+          "after": {}
+        },
+        "story": {
+          "simple_summary": "One team2 attacker was completely free with no team1 player in range \u2014 right in front of goal \u2014 the most dangerous place to give anyone a free touch.",
+          "how_it_started": "Team1 lost track of a runner during the phase of play. The run was timed to arrive behind the defensive line.",
+          "how_it_developed": "Even that fraction of a second of freedom right in front of goal is enough for a quality player. One free attacker in this position is all it takes for a clear chance on goal.",
+          "why_it_matters": "Allowing an attacker to receive freely right in front of goal is a direct route to a clear chance. There is no way to defend properly once the ball arrives at a free player in that area.",
+          "coach_tip": "Each Team1 defender must own their runner \u2014 especially late runs from midfield. When the ball moves wide, always check what's happening in behind. Call it out loudly."
+        },
+        "related_events": []
+      },
+      {
+        "frame_id": 299,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team2",
+        "severity": 10,
+        "details": {
+          "gap_m": 31.99,
+          "compactness_m": 22.92,
+          "def_line_depth_m": 11.65,
+          "team_centroid_x": 50.9
+        },
+        "lifecycle": {
+          "start_frame": 299,
+          "peak_frame": 347,
+          "end_frame": 348,
+          "start_time_s": 12.0,
+          "peak_time_s": 13.9,
+          "duration_s": 2.0
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 24.89,
+            "def_line_depth_m": 97.23,
+            "max_gap_m": 17.61,
+            "centroid_x": 59.0
+          },
+          "peak": {
+            "compactness_m": 22.92,
+            "def_line_depth_m": 11.65,
+            "max_gap_m": 31.99,
+            "centroid_x": 50.9
+          },
+          "after": {
+            "compactness_m": 24.58,
+            "def_line_depth_m": 11.7,
+            "max_gap_m": 31.28,
+            "centroid_x": 50.2
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "The gap persisted for several seconds \u2014 the defence couldn't correct it quickly. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 299,
+            "time_s": 12.0,
+            "relationship": "poor shape contributed to the gap opening"
+          }
+        ]
+      },
+      {
+        "frame_id": 299,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team2",
+        "severity": 6,
+        "details": {
+          "gap_m": 22.69,
+          "compactness_m": 27.53,
+          "def_line_depth_m": 10.66,
+          "team_centroid_x": 51.8
+        },
+        "lifecycle": {
+          "start_frame": 299,
+          "peak_frame": 332,
+          "end_frame": 348,
+          "start_time_s": 12.0,
+          "peak_time_s": 13.3,
+          "duration_s": 2.0
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 24.89,
+            "def_line_depth_m": 97.23,
+            "max_gap_m": 17.61,
+            "centroid_x": 59.0
+          },
+          "peak": {
+            "compactness_m": 27.53,
+            "def_line_depth_m": 10.66,
+            "max_gap_m": 22.69,
+            "centroid_x": 51.8
+          },
+          "after": {
+            "compactness_m": 24.58,
+            "def_line_depth_m": 11.7,
+            "max_gap_m": 31.28,
+            "centroid_x": 50.2
+          }
+        },
+        "story": {
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It lasted long enough that the opponent had multiple opportunities to exploit it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 299,
+            "time_s": 12.0,
+            "relationship": "poor shape contributed to the gap opening"
+          }
+        ]
+      }
+    ],
+    "clip_index": 4,
+    "clip_range": [
+      267,
+      355
+    ]
+  },
+  {
+    "context": {
+      "clip": "356-446",
+      "approx_match_minute": 0,
+      "duration_seconds": 3.6,
+      "fps": 25.0,
+      "team1": {
+        "avg_compactness_m": 19.91,
+        "avg_def_line_depth_m": 60.97,
+        "max_defensive_gap_m": 41.2
+      },
+      "team2": {
+        "avg_compactness_m": 22.5,
+        "avg_def_line_depth_m": 59.1,
+        "max_defensive_gap_m": 40.2
+      },
+      "possession_pct": {
+        "Team1": 33.3,
+        "Team2": 66.7
+      },
+      "possession_trend": "Team2 gaining possession",
+      "top_events": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "details": {
+            "gap_m": 32.6,
+            "compactness_m": 24.48,
+            "def_line_depth_m": 12.14,
+            "team_centroid_x": 50.1
+          },
+          "first_frame": 356,
+          "lifecycle": {
+            "start_frame": 356,
+            "peak_frame": 358,
+            "end_frame": 365,
+            "start_time_s": 14.2,
+            "peak_time_s": 14.3,
+            "duration_s": 0.4
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 25.38,
+              "def_line_depth_m": 12.09,
+              "max_gap_m": 32.54,
+              "centroid_x": 48.6
+            },
+            "peak": {
+              "compactness_m": 24.48,
+              "def_line_depth_m": 12.14,
+              "max_gap_m": 32.6,
+              "centroid_x": 50.1
+            },
+            "after": {
+              "compactness_m": 23.45,
+              "def_line_depth_m": 11.98,
+              "max_gap_m": 32.43,
+              "centroid_x": 52.5
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+            "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+            "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+            "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+            "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+          },
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team1",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team1",
+              "frame_id": 363,
+              "time_s": 14.5,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team1",
+              "frame_id": 363,
+              "time_s": 14.5,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 415,
+              "time_s": 16.6,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 415,
+              "time_s": 16.6,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team2",
+          "severity": 8,
+          "details": {
+            "gap_m": 14.11,
+            "compactness_m": 20.23,
+            "def_line_depth_m": 104.02,
+            "team_centroid_x": 74.5,
+            "attackers": 4,
+            "defenders": 1,
+            "zone": "final_third"
+          },
+          "first_frame": 415,
+          "lifecycle": {
+            "start_frame": 415,
+            "peak_frame": 415,
+            "end_frame": 422,
+            "start_time_s": 16.6,
+            "peak_time_s": 16.6,
+            "duration_s": 0.3
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 23.64,
+              "def_line_depth_m": 12.14,
+              "max_gap_m": 30.03,
+              "centroid_x": 49.9
+            },
+            "peak": {
+              "compactness_m": 20.23,
+              "def_line_depth_m": 104.02,
+              "max_gap_m": 14.11,
+              "centroid_x": 74.5
+            },
+            "after": {
+              "compactness_m": 20.19,
+              "def_line_depth_m": 103.91,
+              "max_gap_m": 39.65,
+              "centroid_x": 65.4
+            }
+          },
+          "story": {
+            "simple_summary": "Team2 had 4 attackers against just 1 defender \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+            "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 4 attackers against just 1 defender appeared right at the edge of the box.",
+            "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+            "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+            "coach_tip": "A midfielder needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team2",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team1",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team1",
+              "frame_id": 363,
+              "time_s": 14.5,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team1",
+              "frame_id": 363,
+              "time_s": 14.5,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 415,
+              "time_s": 16.6,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        },
+        {
+          "type": "SHAPE_DISORGANISED",
+          "team": "Team2",
+          "severity": 6,
+          "details": {
+            "gap_m": 23.79,
+            "compactness_m": 27.93,
+            "def_line_depth_m": 12.14,
+            "team_centroid_x": 49.2
+          },
+          "first_frame": 356,
+          "lifecycle": {
+            "start_frame": 356,
+            "peak_frame": 357,
+            "end_frame": 365,
+            "start_time_s": 14.2,
+            "peak_time_s": 14.3,
+            "duration_s": 0.4
+          },
+          "snapshots": {
+            "before": {
+              "compactness_m": 25.38,
+              "def_line_depth_m": 12.09,
+              "max_gap_m": 32.54,
+              "centroid_x": 48.6
+            },
+            "peak": {
+              "compactness_m": 27.93,
+              "def_line_depth_m": 12.14,
+              "max_gap_m": 23.79,
+              "centroid_x": 49.2
+            },
+            "after": {
+              "compactness_m": 23.45,
+              "def_line_depth_m": 11.98,
+              "max_gap_m": 32.43,
+              "centroid_x": 52.5
+            }
+          },
+          "story": {
+            "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+            "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+            "how_it_developed": "It was momentary but the opponent could have played into it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+            "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+            "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+          },
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team2",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "team": "Team1",
+              "frame_id": 356,
+              "time_s": 14.2,
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team1",
+              "frame_id": 363,
+              "time_s": 14.5,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "team": "Team1",
+              "frame_id": 363,
+              "time_s": 14.5,
+              "relationship": "happened around the same time as shape disorganised"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 415,
+              "time_s": 16.6,
+              "relationship": "happened around the same time as overload"
+            },
+            {
+              "type": "OVERLOAD",
+              "team": "Team2",
+              "frame_id": 415,
+              "time_s": 16.6,
+              "relationship": "happened around the same time as overload"
+            }
+          ]
+        }
+      ],
+      "event_summaries": [
+        {
+          "type": "DEFENSIVE_GAP",
+          "team": "Team2",
+          "severity": 10,
+          "start_time_s": 14.2,
+          "peak_time_s": 14.3,
+          "duration_s": 0.4,
+          "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+          "related_events": [
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "happened around the same time as defensive gap"
+            }
+          ]
+        },
+        {
+          "type": "OVERLOAD",
+          "team": "Team2",
+          "severity": 8,
+          "start_time_s": 16.6,
+          "peak_time_s": 16.6,
+          "duration_s": 0.3,
+          "simple_summary": "Team2 had 4 attackers against just 1 defender \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+          "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 4 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "happened around the same time as defensive gap"
+            },
+            {
+              "type": "SHAPE_DISORGANISED",
+              "relationship": "happened around the same time as shape disorganised"
+            }
+          ]
+        },
+        {
+          "type": "SHAPE_DISORGANISED",
+          "team": "Team2",
+          "severity": 6,
+          "start_time_s": 14.2,
+          "peak_time_s": 14.3,
+          "duration_s": 0.4,
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It was momentary but the opponent could have played into it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit.",
+          "related_events": [
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "poor shape contributed to the gap opening"
+            },
+            {
+              "type": "DEFENSIVE_GAP",
+              "relationship": "poor shape contributed to the gap opening"
+            }
+          ]
+        }
+      ],
+      "worst_frame": 356,
+      "thresholds": {
+        "gap_critical_m": 16.0,
+        "gap_warning_m": 12.0,
+        "compactness_disorg_m": 18.0,
+        "high_def_line_m": 65.0,
+        "counterattack_shift_m": 9.0
+      }
+    },
+    "panel": {
+      "headline": "Gap opens in Team2's defence",
+      "badge": "DEFENSIVE_GAP",
+      "danger": 10,
+      "event_start": "14.2s",
+      "event_peak": "14.3s",
+      "what_happened": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+      "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+      "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+      "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+      "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one.",
+      "timeline_tag": "gap in defensive line",
+      "confidence": "MEDIUM"
+    },
+    "events": [
+      {
+        "frame_id": 356,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team2",
+        "severity": 10,
+        "details": {
+          "gap_m": 32.6,
+          "compactness_m": 24.48,
+          "def_line_depth_m": 12.14,
+          "team_centroid_x": 50.1
+        },
+        "lifecycle": {
+          "start_frame": 356,
+          "peak_frame": 358,
+          "end_frame": 365,
+          "start_time_s": 14.2,
+          "peak_time_s": 14.3,
+          "duration_s": 0.4
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 25.38,
+            "def_line_depth_m": 12.09,
+            "max_gap_m": 32.54,
+            "centroid_x": 48.6
+          },
+          "peak": {
+            "compactness_m": 24.48,
+            "def_line_depth_m": 12.14,
+            "max_gap_m": 32.6,
+            "centroid_x": 50.1
+          },
+          "after": {
+            "compactness_m": 23.45,
+            "def_line_depth_m": 11.98,
+            "max_gap_m": 32.43,
+            "centroid_x": 52.5
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It barely lasted a second, but in a dangerous position that's all it takes. The space sat close enough for a direct run at goal with no Team2 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team2's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team1",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 356,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team2",
+        "severity": 6,
+        "details": {
+          "gap_m": 23.79,
+          "compactness_m": 27.93,
+          "def_line_depth_m": 12.14,
+          "team_centroid_x": 49.2
+        },
+        "lifecycle": {
+          "start_frame": 356,
+          "peak_frame": 357,
+          "end_frame": 365,
+          "start_time_s": 14.2,
+          "peak_time_s": 14.3,
+          "duration_s": 0.4
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 25.38,
+            "def_line_depth_m": 12.09,
+            "max_gap_m": 32.54,
+            "centroid_x": 48.6
+          },
+          "peak": {
+            "compactness_m": 27.93,
+            "def_line_depth_m": 12.14,
+            "max_gap_m": 23.79,
+            "centroid_x": 49.2
+          },
+          "after": {
+            "compactness_m": 23.45,
+            "def_line_depth_m": 11.98,
+            "max_gap_m": 32.43,
+            "centroid_x": 52.5
+          }
+        },
+        "story": {
+          "simple_summary": "Team2's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It was momentary but the opponent could have played into it. With the block this open, passing lanes appeared between and behind Team2's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team2 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team1",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 356,
+        "type": "DEFENSIVE_GAP",
+        "team": "Team1",
+        "severity": 10,
+        "details": {
+          "gap_m": 28.76,
+          "compactness_m": 22.71,
+          "def_line_depth_m": 15.31,
+          "team_centroid_x": 51.4
+        },
+        "lifecycle": {
+          "start_frame": 356,
+          "peak_frame": 356,
+          "end_frame": 379,
+          "start_time_s": 14.2,
+          "peak_time_s": 14.2,
+          "duration_s": 0.9
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 22.71,
+            "def_line_depth_m": 15.31,
+            "max_gap_m": 28.76,
+            "centroid_x": 51.4
+          },
+          "peak": {
+            "compactness_m": 22.71,
+            "def_line_depth_m": 15.31,
+            "max_gap_m": 28.76,
+            "centroid_x": 51.4
+          },
+          "after": {
+            "compactness_m": 22.09,
+            "def_line_depth_m": 11.7,
+            "max_gap_m": 18.54,
+            "centroid_x": 43.0
+          }
+        },
+        "story": {
+          "simple_summary": "Team1 left a massive gap \u2014 almost no cover between the defensive lines in their defensive half.",
+          "how_it_started": "The shape wasn't fully compact, which made the gap harder to cover. The defensive line was sitting relatively deep. A player stepped forward or drifted wide without anyone covering the space left behind.",
+          "how_it_developed": "It stayed open long enough for the opponent to notice and threaten. The space sat close enough for a direct run at goal with no Team1 player in position to intercept a pass into it.",
+          "why_it_matters": "A gap that wide is virtually indefensible without a recovery run. Opponents who read the game well will target this immediately.",
+          "coach_tip": "Team1's defensive block needs to stay tighter as a unit. When one player moves, everyone adjusts \u2014 not just the nearest one."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 363,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team1",
+        "severity": 6,
+        "details": {
+          "gap_m": 27.51,
+          "compactness_m": 23.35,
+          "def_line_depth_m": 11.76,
+          "team_centroid_x": 42.2
+        },
+        "lifecycle": {
+          "start_frame": 363,
+          "peak_frame": 377,
+          "end_frame": 381,
+          "start_time_s": 14.5,
+          "peak_time_s": 15.1,
+          "duration_s": 0.7
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 22.71,
+            "def_line_depth_m": 15.31,
+            "max_gap_m": 28.76,
+            "centroid_x": 51.4
+          },
+          "peak": {
+            "compactness_m": 23.35,
+            "def_line_depth_m": 11.76,
+            "max_gap_m": 27.51,
+            "centroid_x": 42.2
+          },
+          "after": {
+            "compactness_m": 22.82,
+            "def_line_depth_m": 11.65,
+            "max_gap_m": 27.89,
+            "centroid_x": 42.1
+          }
+        },
+        "story": {
+          "simple_summary": "Team1's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "The disorganisation held for a few seconds \u2014 enough time for a threatening ball in. With the block this open, passing lanes appeared between and behind Team1's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team1 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team1",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 363,
+        "type": "SHAPE_DISORGANISED",
+        "team": "Team1",
+        "severity": 6,
+        "details": {
+          "gap_m": 27.51,
+          "compactness_m": 23.35,
+          "def_line_depth_m": 11.76,
+          "team_centroid_x": 42.2
+        },
+        "lifecycle": {
+          "start_frame": 363,
+          "peak_frame": 377,
+          "end_frame": 419,
+          "start_time_s": 14.5,
+          "peak_time_s": 15.1,
+          "duration_s": 2.2
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 22.71,
+            "def_line_depth_m": 15.31,
+            "max_gap_m": 28.76,
+            "centroid_x": 51.4
+          },
+          "peak": {
+            "compactness_m": 23.35,
+            "def_line_depth_m": 11.76,
+            "max_gap_m": 27.51,
+            "centroid_x": 42.2
+          },
+          "after": {
+            "compactness_m": 16.83,
+            "def_line_depth_m": 11.1,
+            "max_gap_m": 32.05,
+            "centroid_x": 49.3
+          }
+        },
+        "story": {
+          "simple_summary": "Team1's defensive block was too spread to be effective as a defensive unit.",
+          "how_it_started": "Players gradually moved out of their defensive positions. Around the middle of the pitch \u2014 gaps here allow balls in behind.",
+          "how_it_developed": "It lasted long enough that the opponent had multiple opportunities to exploit it. With the block this open, passing lanes appeared between and behind Team1's lines.",
+          "why_it_matters": "When the block is that open, any ball into the space between lines is almost impossible to defend.",
+          "coach_tip": "When Team1 defends, the spacing between players should stay tight. Every time someone moves, the player next to them must adjust. It's a collective responsibility \u2014 one player drifting breaks the whole unit."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team1",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "poor shape contributed to the gap opening"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 415,
+        "type": "OVERLOAD",
+        "team": "Team2",
+        "severity": 8,
+        "details": {
+          "gap_m": 14.11,
+          "compactness_m": 20.23,
+          "def_line_depth_m": 104.02,
+          "team_centroid_x": 74.5,
+          "attackers": 4,
+          "defenders": 1,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 415,
+          "peak_frame": 415,
+          "end_frame": 422,
+          "start_time_s": 16.6,
+          "peak_time_s": 16.6,
+          "duration_s": 0.3
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 23.64,
+            "def_line_depth_m": 12.14,
+            "max_gap_m": 30.03,
+            "centroid_x": 49.9
+          },
+          "peak": {
+            "compactness_m": 20.23,
+            "def_line_depth_m": 104.02,
+            "max_gap_m": 14.11,
+            "centroid_x": 74.5
+          },
+          "after": {
+            "compactness_m": 20.19,
+            "def_line_depth_m": 103.91,
+            "max_gap_m": 39.65,
+            "centroid_x": 65.4
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 had 4 attackers against just 1 defender \u2014 a clear overload with multiple free attackers right at the edge of the box.",
+          "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 4 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "A midfielder needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team1",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      },
+      {
+        "frame_id": 415,
+        "type": "OVERLOAD",
+        "team": "Team2",
+        "severity": 8,
+        "details": {
+          "gap_m": 14.11,
+          "compactness_m": 20.23,
+          "def_line_depth_m": 104.02,
+          "team_centroid_x": 74.5,
+          "attackers": 3,
+          "defenders": 1,
+          "zone": "final_third"
+        },
+        "lifecycle": {
+          "start_frame": 415,
+          "peak_frame": 415,
+          "end_frame": 424,
+          "start_time_s": 16.6,
+          "peak_time_s": 16.6,
+          "duration_s": 0.4
+        },
+        "snapshots": {
+          "before": {
+            "compactness_m": 23.64,
+            "def_line_depth_m": 12.14,
+            "max_gap_m": 30.03,
+            "centroid_x": 49.9
+          },
+          "peak": {
+            "compactness_m": 20.23,
+            "def_line_depth_m": 104.02,
+            "max_gap_m": 14.11,
+            "centroid_x": 74.5
+          },
+          "after": {
+            "compactness_m": 21.19,
+            "def_line_depth_m": 103.85,
+            "max_gap_m": 39.81,
+            "centroid_x": 63.4
+          }
+        },
+        "story": {
+          "simple_summary": "Team2 had 3 attackers against just 1 defender \u2014 a two-on-one situation that gave the attacker real options right at the edge of the box.",
+          "how_it_started": "Team2 runners moved forward and Team1 didn't track them. 3 attackers against just 1 defender appeared right at the edge of the box.",
+          "how_it_developed": "Even in that split second, a quality team will find the free man and shoot. Team1's remaining defender had no realistic chance of covering all the threats.",
+          "why_it_matters": "Numerical overloads in front of goal are one of the clearest routes to a shot on target. When a defence is outnumbered that close to goal, errors are almost guaranteed.",
+          "coach_tip": "The nearest Team1 player needs to track the runners earlier. By the time Team1 realised they were outnumbered, it was too late to recover. The solution is tracking movement before the ball arrives \u2014 not reacting to it after."
+        },
+        "related_events": [
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team2",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "DEFENSIVE_GAP",
+            "team": "Team1",
+            "frame_id": 356,
+            "time_s": 14.2,
+            "relationship": "happened around the same time as defensive gap"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "SHAPE_DISORGANISED",
+            "team": "Team1",
+            "frame_id": 363,
+            "time_s": 14.5,
+            "relationship": "happened around the same time as shape disorganised"
+          },
+          {
+            "type": "OVERLOAD",
+            "team": "Team2",
+            "frame_id": 415,
+            "time_s": 16.6,
+            "relationship": "happened around the same time as overload"
+          }
+        ]
+      }
+    ],
+    "clip_index": 5,
+    "clip_range": [
+      356,
+      446
+    ]
+  }
+]

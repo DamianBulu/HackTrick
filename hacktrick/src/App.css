@@ -497,8 +497,6 @@ body {
 }
 
 .video-container {
-    /*width: 100%;*/
-    /*height: 100%;*/
     background: black;
     display: flex;
     align-items: center;
@@ -528,4 +526,32 @@ body {
 .event-item.clickable-event:active {
     transform: scale(0.98);
     background: #404040;
+}
+
+.controls-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.control-btn {
+    background: #333;
+    border: 1px solid #444;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.control-btn:hover {
+    background: #444;
+}
+
+.play-btn {
+    /* Your existing play button styles */
+    min-width: 100px;
 }
